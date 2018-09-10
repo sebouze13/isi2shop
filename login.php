@@ -1,29 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "abc123...";
-$dbname = "bdusers";
+require_once "functions/bdManager.php";
+require_once "functions/constantes.php";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: ". mysqli_connect_error());
-}
-
-$sql = "SELECT login, password FROM users";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "login: " . $row["login"]. " - Pwd: " . $row["password"]."<br>";
+if(array_key_exists(CONNEXION_LOGIN, $_POST) && array_key_exists(CONNEXION_PASS, $_POST)){
+    if(login($_POST[CONNEXION_LOGIN], $_POST[CONNEXION_PASS])){
+        header("Location: index.html");
     }
-} else {
-    echo "0 results";
 }
-
-mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <!--[if (gte IE 9)|!(IE)]><!-->
@@ -866,7 +849,7 @@ mysqli_close($conn);
         <div class="col-12">
           <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-8 col-md-8 ">
-              <form class="main-form full">
+              <form class="main-form full" method="post" action="<?= $_SERVER['PHP_SELF']?>">
                 <div class="row">
                   <div class="col-12 mb-20">
                     <div class="heading-part heading-bg">
@@ -875,14 +858,14 @@ mysqli_close($conn);
                   </div>
                   <div class="col-12">
                     <div class="input-box">
-                      <label for="login-email">Email address</label>
-                      <input id="login-email" type="email" required placeholder="Email Address">
+                      <label for=<?=CONNEXION_LOGIN?>>Email address</label>
+                      <input id=<?=CONNEXION_LOGIN?> name=<?=CONNEXION_LOGIN?> type="email" required placeholder="Email Address">
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="input-box">
-                      <label for="login-pass">Password</label>
-                      <input id="login-pass" type="password" required placeholder="Enter your Password">
+                      <label for=<?=CONNEXION_PASS?>>Password</label>
+                      <input id=<?=CONNEXION_PASS?> name=<?=CONNEXION_PASS?> type="password" required placeholder="Enter your Password">
                     </div>
                   </div>
                   <div class="col-12">
@@ -892,7 +875,7 @@ mysqli_close($conn);
                         <label for="remember_me">Remember Me</label>
                       </span>
                     </div>
-                    <button name="submit" type="submit" class="btn-color right-side">Log In</button>
+                    <button type="submit" class="btn-color right-side">Log In</button>
                   </div>
                   <div class="col-12"> <a title="Forgot Password" class="forgot-password mtb-20" href="#">Forgot your password?</a>
                     <hr>

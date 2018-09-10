@@ -552,7 +552,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="top-link right-side">
-                                            <div class="help-num" ><i class="fa fa-phone"> </i> Need Help? : 03 233 455 55</div>
+                                            <div class="help-num" ><i class="fa fa-phone"> </i> Need Help? : (+1) 514-842-2426</div>
                                         </div>
                                     </div>
                                 </div>
@@ -563,7 +563,7 @@
                 <div class="col-lg-4 col-md-5 ">
                     <div class="right-side float-left-xs header-right-link">
                         <div class="right-side">
-                            <div class="help-num" ><i class="fa fa-phone"> </i> Need Help? : 03 233 455 55</div>
+                            <div class="help-num" ><i class="fa fa-phone"> </i> Need Help? : (+1) 514-842-2426</div>
                         </div>
                     </div>
                 </div>

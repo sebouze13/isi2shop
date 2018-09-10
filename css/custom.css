@@ -3246,7 +3246,7 @@ _______________________________________________________*/
     left: 50%;
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
-    -0-transform: translateX(-50%);
+    --transform: translateX(-50%);
     transform: translateX(-50%);
 } 
 

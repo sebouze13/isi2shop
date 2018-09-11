@@ -227,7 +227,7 @@
                 <div class="item">
                   <div class="product-item mb-30">
                     <div class="main-label new-label"><span>New</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/1.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/1.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -236,20 +236,20 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item">
                     <div class="main-label sale-label"><span>Sale</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/12.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/12.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -258,14 +258,14 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
@@ -273,7 +273,7 @@
                 <div class="item">
                   <div class="product-item sold-out mb-30">
                     <div class="main-label sale-label"><span>Sale</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/2.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/2.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -282,20 +282,20 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item">
                     <div class="main-label new-label"><span>New</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/9.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/9.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -304,14 +304,14 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
@@ -320,7 +320,7 @@
                   <div class="product-item mb-30">
                     <div class="main-label new-label"><span>New</span></div>
                     <div class="main-label sale-label"><span>Sale</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/3.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/3.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -329,19 +329,19 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item">
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/10.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/10.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -350,21 +350,21 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item mb-30">
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/4.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/4.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -373,19 +373,19 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item sold-out">
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/7.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/7.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -394,14 +394,14 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
@@ -409,7 +409,7 @@
                 <div class="item">
                   <div class="product-item mb-30">
                     <div class="main-label sale-label"><span>Sale</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/8.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/8.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -418,20 +418,20 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item">
                     <div class="main-label sale-label"><span>Sale</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/12.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/12.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -440,21 +440,21 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item mb-30">
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/6.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/6.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -463,19 +463,19 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item">
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/11.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/11.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -484,14 +484,14 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
@@ -500,7 +500,7 @@
                   <div class="product-item mb-30">
                     <div class="main-label new-label"><span>New</span></div>
                     <div class="main-label sale-label"><span>Sale</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/13.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/13.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -509,20 +509,20 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item">
                     <div class="main-label new-label"><span>New</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/4.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/4.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -531,21 +531,21 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item mb-30">
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/12.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/12.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -554,20 +554,20 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item">
                     <div class="main-label sale-label"><span>Sale</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/15.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/15.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -576,21 +576,21 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item mb-30">
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/16.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/16.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -599,19 +599,19 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item">
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/2.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/2.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -620,21 +620,21 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item mb-30">
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/10.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/10.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -643,20 +643,20 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>
                   <div class="product-item">
                     <div class="main-label new-label"><span>New</span></div>
-                    <div class="product-image"> <a href="product-page.html"> <img src="images/1.jpg" alt="Stylexpo"> </a>
+                    <div class="product-image"> <a href="product-page.php"> <img src="images/1.jpg" alt="Stylexpo"> </a>
                       <div class="product-detail-inner">
                         <div class="detail-inner-left align-center">
                           <ul>
@@ -665,14 +665,14 @@
                                 <button title="Add to Cart"><span></span>Add to Cart</button>
                               </form>
                             </li>
-                            <li class="pro-wishlist-icon active"><a href="wishlist.html" title="Wishlist"></a></li>
-                            <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                            <li class="pro-wishlist-icon active"><a href="wishlist.php" title="Wishlist"></a></li>
+                            <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                     <div class="product-item-details">
-                      <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                      <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                       <div class="price-box"> <span class="price">$80.00</span> <del class="price old-price">$100.00</del> </div>
                     </div>
                   </div>

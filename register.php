@@ -97,7 +97,7 @@
           <div class="col-xl-3 col-md-3 col-lgmd-20per">
             <div class="header-middle-left">
               <div class="navbar-header float-none-sm">
-                <a class="navbar-brand page-scroll" href="index-2.html">
+                <a class="navbar-brand page-scroll" href="index.php">
                   <img alt="Stylexpo" src="images/logo.png">
                 </a> 
               </div>
@@ -158,12 +158,12 @@
             <div class="right-side float-left-xs header-right-link">
               <ul>
                 <li class="compare-icon">
-                  <a href="compare.html">
+                  <a href="compare.php">
                     <span></span>
                   </a>
                 </li>
                 <li class="wishlist-icon">
-                  <a href="wishlist.html">
+                  <a href="wishlist.php">
                     <span></span>
                   </a>
                 </li>
@@ -199,7 +199,7 @@
                     </ul>
                     <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
                     <div class="clearfix"></div>
-                    <div class="mt-20"> <a href="cart.html" class="btn-color btn">Cart</a> <a href="checkout.html" class="btn-color btn right-side">Checkout</a> </div>
+                    <div class="mt-20"> <a href="cart.php" class="btn-color btn">Cart</a> <a href="checkout.php" class="btn-color btn right-side">Checkout</a> </div>
                   </div>
                 </li>
                 <li class="side-toggle">
@@ -350,7 +350,7 @@
                                     <div class="owl-carousel sub_menu_slider">
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/1.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/1.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -359,14 +359,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span>  
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -376,7 +376,7 @@
                                       </div>
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/2.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/2.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -385,14 +385,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span>              
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -402,7 +402,7 @@
                                       </div>
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/3.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/3.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -411,14 +411,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span>  
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -428,7 +428,7 @@
                                       </div>
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/4.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/4.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -437,14 +437,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>                  
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span> 
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -454,7 +454,7 @@
                                       </div>
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/5.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/5.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -463,14 +463,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span>
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -514,13 +514,13 @@
                       <ul class="sub-menu-level1">
                         <li class="level2">
                           <ul class="sub-menu-level2 ">
-                            <li class="level3"><a href="about.html"><span>■</span>About Us</a></li>
-                            <li class="level3"><a href="account.html"><span>■</span>Account</a></li>
-                            <li class="level3"><a href="checkout.html"><span>■</span>Checkout</a></li>
-                            <li class="level3"><a href="compare.html"><span>■</span>Compare</a></li>
-                            <li class="level3"><a href="wishlist.html"><span>■</span>Wishlist</a></li>
-                            <li class="level3"><a href="contact.html"><span>■</span>Contact</a></li>
-                            <li class="level3"><a href="404.html"><span>■</span>404 Error</a></li>
+                            <li class="level3"><a href="about.php"><span>■</span>About Us</a></li>
+                            <li class="level3"><a href="account.php"><span>■</span>Account</a></li>
+                            <li class="level3"><a href="checkout.php"><span>■</span>Checkout</a></li>
+                            <li class="level3"><a href="compare.php"><span>■</span>Compare</a></li>
+                            <li class="level3"><a href="wishlist.php"><span>■</span>Wishlist</a></li>
+                            <li class="level3"><a href="contact.php"><span>■</span>Contact</a></li>
+                            <li class="level3"><a href="404.php"><span>■</span>404 Error</a></li>
                             <li class="level3"><a href="blog.html"><span>■</span>Blog</a></li>
                             <li class="level3"><a href="single-blog.html"><span>■</span>Single Blog</a></li>
                           </ul>
@@ -733,7 +733,7 @@
               </ul>
               <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
               <div class="clearfix"></div>
-              <div class="mt-20"> <a href="cart.html" class="btn-color btn">Cart</a> <a href="checkout.html" class="btn-color btn right-side">Checkout</a> </div>
+              <div class="mt-20"> <a href="cart.php" class="btn-color btn">Cart</a> <a href="checkout.php" class="btn-color btn right-side">Checkout</a> </div>
             </div>
           </div>
         </div>
@@ -744,7 +744,7 @@
           <div class="popup-detail">
             <div class="row">
               <div class="col-lg-4">
-                <a href="account.html">
+                <a href="account.php">
                   <div class="account-inner mb-30">
                     <i class="fa fa-user"></i><br/>
                     <span>Account</span>
@@ -760,7 +760,7 @@
                 </a>
               </div>
               <div class="col-lg-4">
-                <a href="cart.html">
+                <a href="cart.php">
                   <div class="account-inner mb-30">
                     <i class="fa fa-shopping-bag"></i><br/>
                     <span>Shopping</span>
@@ -768,7 +768,7 @@
                 </a>
               </div>
               <div class="col-lg-4">
-                <a href="account.html#step4">
+                <a href="account.php#step4">
                   <div class="account-inner">
                     <i class="fa fa-key"></i><br/>
                     <span>Change Pass</span>
@@ -776,7 +776,7 @@
                 </a>
               </div>
               <div class="col-lg-4">
-                <a href="account.html#step3">
+                <a href="account.php#step3">
                   <div class="account-inner">
                     <i class="fa fa-history"></i><br/>
                     <span>history</span>
@@ -823,7 +823,7 @@
         <h1 class="banner-title">Register</h1>
         <div class="bread-crumb right-side float-none-xs">
           <ul>
-            <li><a href="index-2.html">Home</a>/</li>
+            <li><a href="index.php">Home</a>/</li>
             <li><span>Register</span></li>
           </ul>
         </div>

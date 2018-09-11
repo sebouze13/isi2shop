@@ -14,7 +14,7 @@
                                         Montréal, Québec, H2M 1M2</p>
                                 </li>
                                 <li class="item"> <i class="fa fa-envelope"> </i>
-                                    <p> <a href="#">infoservices@isi2buy.com </a> </p>
+                                    <p> <a href="#">infoservices@isi2shop.com </a> </p>
                                 </li>
                                 <li class="item"> <i class="fa fa-phone"> </i>
                                     <p>(+1) 514-842-2426</p>
@@ -41,7 +41,7 @@
                                 <li><a href="#"> Delivery information</a></li>
                                 <li><a href="#"> Privacy Policy</a></li>
                                 <li><a href="#"> Terms & Conditions</a></li>
-                                <li><a href="#"> Contact</a></li>
+                                <li><a href="contact.php"> Contact</a></li>
                                 <li><a href="#"> Sitemap</a></li>
                             </ul>
                         </div>
@@ -84,8 +84,8 @@
                     <div class="col-12 ">
                         <div class="site-link">
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="about.php">About Us</a></li>
+                                <li><a href="contact.php">Contact Us</a></li>
                                 <li><a href="#">Customer </a></li>
                                 <li><a href="#">Service</a></li>
                                 <li><a href="#">Privacy</a></li>

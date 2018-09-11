@@ -3,7 +3,7 @@
 <html lang="en">
 <!--<![endif]-->
 
-<!-- Mirrored from aaryaweb.info/html/stylexpo/stx002/order-overview.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Sep 2018 12:59:37 GMT -->
+<!-- Mirrored from aaryaweb.info/html/stylexpo/stx002/compare.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Sep 2018 12:58:56 GMT -->
 <head>
 <!-- Basic Page Needs
   ================================================== -->
@@ -41,7 +41,7 @@
 <body >
 <div class="se-pre-con"></div>
 <div class="main"> 
-
+  
   <!-- HEADER START -->
   <header class="navbar navbar-custom container-full-sm" id="header">
     <div class="header-top">
@@ -97,7 +97,7 @@
           <div class="col-xl-3 col-md-3 col-lgmd-20per">
             <div class="header-middle-left">
               <div class="navbar-header float-none-sm">
-                <a class="navbar-brand page-scroll" href="index-2.html">
+                <a class="navbar-brand page-scroll" href="index.php">
                   <img alt="Stylexpo" src="images/logo.png">
                 </a> 
               </div>
@@ -158,12 +158,12 @@
             <div class="right-side float-left-xs header-right-link">
               <ul>
                 <li class="compare-icon">
-                  <a href="compare.html">
+                  <a href="compare.php">
                     <span></span>
                   </a>
                 </li>
                 <li class="wishlist-icon">
-                  <a href="wishlist.html">
+                  <a href="wishlist.php">
                     <span></span>
                   </a>
                 </li>
@@ -199,7 +199,7 @@
                     </ul>
                     <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
                     <div class="clearfix"></div>
-                    <div class="mt-20"> <a href="cart.html" class="btn-color btn">Cart</a> <a href="checkout.html" class="btn-color btn right-side">Checkout</a> </div>
+                    <div class="mt-20"> <a href="cart.php" class="btn-color btn">Cart</a> <a href="checkout.php" class="btn-color btn right-side">Checkout</a> </div>
                   </div>
                 </li>
                 <li class="side-toggle">
@@ -350,7 +350,7 @@
                                     <div class="owl-carousel sub_menu_slider">
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/1.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/1.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -359,14 +359,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span>  
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -376,7 +376,7 @@
                                       </div>
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/2.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/2.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -385,14 +385,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span>              
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -402,7 +402,7 @@
                                       </div>
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/3.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/3.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -411,14 +411,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span>  
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -428,7 +428,7 @@
                                       </div>
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/4.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/4.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -437,14 +437,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>                  
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span> 
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -454,7 +454,7 @@
                                       </div>
                                       <div class="product-item">
                                         <div class="product-image"> 
-                                          <a href="product-page.html"> <img src="images/5.jpg" alt="Stylexpo"> </a>
+                                          <a href="product-page.php"> <img src="images/5.jpg" alt="Stylexpo"> </a>
                                           <div class="product-detail-inner">
                                             <div class="detail-inner-left align-center">
                                               <ul>
@@ -463,14 +463,14 @@
                                                     <button title="Add to Cart"><span></span></button>
                                                   </form>
                                                 </li>
-                                                <li class="pro-wishlist-icon"><a href="wishlist.html" title="Wishlist"></a></li>
-                                                <li class="pro-compare-icon"><a href="compare.html" title="Compare"></a></li>
+                                                <li class="pro-wishlist-icon"><a href="wishlist.php" title="Wishlist"></a></li>
+                                                <li class="pro-compare-icon"><a href="compare.php" title="Compare"></a></li>
                                               </ul>
                                             </div>
                                           </div>
                                         </div>
                                         <div class="product-item-details">
-                                          <div class="product-item-name"> <a href="product-page.html">Defyant Reversible Dot Shorts</a> </div>
+                                          <div class="product-item-name"> <a href="product-page.php">Defyant Reversible Dot Shorts</a> </div>
                                           <div class="price-box"> <span class="price">$80.00</span>
                                           </div>
                                           <div class="rating-summary-block right-side">
@@ -514,13 +514,13 @@
                       <ul class="sub-menu-level1">
                         <li class="level2">
                           <ul class="sub-menu-level2 ">
-                            <li class="level3"><a href="about.html"><span>■</span>About Us</a></li>
-                            <li class="level3"><a href="account.html"><span>■</span>Account</a></li>
-                            <li class="level3"><a href="checkout.html"><span>■</span>Checkout</a></li>
-                            <li class="level3"><a href="compare.html"><span>■</span>Compare</a></li>
-                            <li class="level3"><a href="wishlist.html"><span>■</span>Wishlist</a></li>
-                            <li class="level3"><a href="contact.html"><span>■</span>Contact</a></li>
-                            <li class="level3"><a href="404.html"><span>■</span>404 Error</a></li>
+                            <li class="level3"><a href="about.php"><span>■</span>About Us</a></li>
+                            <li class="level3"><a href="account.php"><span>■</span>Account</a></li>
+                            <li class="level3"><a href="checkout.php"><span>■</span>Checkout</a></li>
+                            <li class="level3"><a href="compare.php"><span>■</span>Compare</a></li>
+                            <li class="level3"><a href="wishlist.php"><span>■</span>Wishlist</a></li>
+                            <li class="level3"><a href="contact.php"><span>■</span>Contact</a></li>
+                            <li class="level3"><a href="404.php"><span>■</span>404 Error</a></li>
                             <li class="level3"><a href="blog.html"><span>■</span>Blog</a></li>
                             <li class="level3"><a href="single-blog.html"><span>■</span>Single Blog</a></li>
                           </ul>
@@ -733,7 +733,7 @@
               </ul>
               <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
               <div class="clearfix"></div>
-              <div class="mt-20"> <a href="cart.html" class="btn-color btn">Cart</a> <a href="checkout.html" class="btn-color btn right-side">Checkout</a> </div>
+              <div class="mt-20"> <a href="cart.php" class="btn-color btn">Cart</a> <a href="checkout.php" class="btn-color btn right-side">Checkout</a> </div>
             </div>
           </div>
         </div>
@@ -744,7 +744,7 @@
           <div class="popup-detail">
             <div class="row">
               <div class="col-lg-4">
-                <a href="account.html">
+                <a href="account.php">
                   <div class="account-inner mb-30">
                     <i class="fa fa-user"></i><br/>
                     <span>Account</span>
@@ -760,7 +760,7 @@
                 </a>
               </div>
               <div class="col-lg-4">
-                <a href="cart.html">
+                <a href="cart.php">
                   <div class="account-inner mb-30">
                     <i class="fa fa-shopping-bag"></i><br/>
                     <span>Shopping</span>
@@ -768,7 +768,7 @@
                 </a>
               </div>
               <div class="col-lg-4">
-                <a href="account.html#step4">
+                <a href="account.php#step4">
                   <div class="account-inner">
                     <i class="fa fa-key"></i><br/>
                     <span>Change Pass</span>
@@ -776,7 +776,7 @@
                 </a>
               </div>
               <div class="col-lg-4">
-                <a href="account.html#step3">
+                <a href="account.php#step3">
                   <div class="account-inner">
                     <i class="fa fa-history"></i><br/>
                     <span>history</span>
@@ -814,18 +814,17 @@
       </div>
     </div>
   </header>
-  <!-- HEADER END -->      
-  
+  <!-- HEADER END -->           
+
   <!-- Bread Crumb STRAT -->
   <div class="banner inner-banner1 ">
     <div class="container">
       <section class="banner-detail center-xs">
-        <h1 class="banner-title">Checkout</h1>
+        <h1 class="banner-title">Product Comparison</h1>
         <div class="bread-crumb right-side float-none-xs">
           <ul>
-            <li><a href="index-2.html">Home</a>/</li>
-            <li><a href="cart.html">Cart</a>/</li>
-            <li><span>Checkout</span></li>
+            <li><a href="index.php">Home</a>/</li>
+            <li><span>Product Comparison</span></li>
           </ul>
         </div>
       </section>
@@ -833,210 +832,126 @@
   </div>
   <!-- Bread Crumb END --> 
 
+  
   <!-- CONTAIN START -->
-  <section class="checkout-section ptb-70">
+  <section class="ptb-70">
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          <div class="checkout-step mb-40">
-            <ul>
-              <li> 
-                  <a href="checkout.html">
-                  <div class="step">
-                    <div class="line"></div>
-                    <div class="circle">1</div>
-                  </div>
-                  <span>Shipping</span> 
-                </a> 
-              </li>
-              <li class="active"> 
-                <a href="order-overview.html">
-                  <div class="step">
-                    <div class="line"></div>
-                    <div class="circle">2</div>
-                  </div>
-                  <span>Order Overview</span> 
-                </a> 
-              </li>
-              <li> 
-                <a href="payment.html">
-                  <div class="step">
-                    <div class="line"></div>
-                    <div class="circle">3</div>
-                  </div>
-                  <span>Payment</span> 
-                </a> 
-              </li>
-              <li> 
-                <a href="order-complete.html">
-                  <div class="step">
-                    <div class="line"></div>
-                    <div class="circle">4</div>
-                  </div>
-                  <span>Order Complete</span> 
-                </a> 
-              </li>
-              <li>
-                <div class="step">
-                  <div class="line"></div>
-                </div>
-              </li>
-            </ul>
-            <hr>
-          </div>
-          <div class="checkout-content">
-            <div class="row">
-              <div class="col-12">
-                <div class="heading-part align-center">
-                  <h2 class="heading">Order Overview</h2>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-8 mb-sm-30">
-                <div class="cart-item-table commun-table mb-30">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Product</th>
-                          <th>Product Detail</th>
-                          <th>Sub Total</th>
-                          <th>Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><a href="product-page.html">
-                            <div class="product-image"><img alt="Honour" src="images/1.jpg"></div>
-                            </a></td>
-                          <td><div class="product-title"> <a href="product-page.html">Cross Colours Camo Print Tank half mengo</a>
-                              <div class="product-info-stock-sku m-0">
-                                <div>
-                                  <label>Price: </label>
-                                  <div class="price-box"> <span class="info-deta price">$80.00</span> </div>
-                                </div>
-                              </div>
-                              <div class="product-info-stock-sku m-0">
-                                <div>
-                                  <label>Quantity: </label>
-                                  <span class="info-deta">1</span> </div>
-                              </div>
-                            </div></td>
-                          <td><div data-id="100" class="total-price price-box"> <span class="price">$80.00</span> </div></td>
-                          <td><i class="fa fa-trash cart-remove-item" data-id="100" title="Remove Item From Cart"></i></td>
-                        </tr>
-                        <tr>
-                          <td><a href="product-page.html">
-                            <div class="product-image"><img alt="Honour" src="images/2.jpg"></div>
-                            </a></td>
-                          <td><div class="product-title"> <a href="product-page.html">Cross Colours Camo Print Tank half mengo</a>
-                              <div class="product-info-stock-sku m-0">
-                                <div>
-                                  <label>Price: </label>
-                                  <div class="price-box"> <span class="info-deta price">$80.00</span> </div>
-                                </div>
-                              </div>
-                              <div class="product-info-stock-sku m-0">
-                                <div>
-                                  <label>Quantity: </label>
-                                  <span class="info-deta">1</span> </div>
-                              </div>
-                            </div></td>
-                          <td><div data-id="100" class="total-price price-box"> <span class="price">$80.00</span> </div></td>
-                          <td><i class="fa fa-trash cart-remove-item" data-id="100" title="Remove Item From Cart"></i></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="cart-total-table commun-table mb-30">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th colspan="2">Cart Total</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Item(s) Subtotal</td>
-                          <td><div class="price-box"> <span class="price">$160.00</span> </div></td>
-                        </tr>
-                        <tr>
-                          <td>Shipping</td>
-                          <td><div class="price-box"> <span class="price">$0.00</span> </div></td>
-                        </tr>
-                        <tr>
-                          <td><b>Amount Payable</b></td>
-                          <td><div class="price-box"> <span class="price"><b>$160.00</b></span> </div></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="right-side float-none-xs"> <a href="payment.html" class="btn btn-color">Next</a> </div>
-              </div>
-              <div class="col-md-4">
-                <div class="cart-total-table address-box commun-table mb-30">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Shipping Address</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <ul>
-                              <li class="inner-heading"> <b>Denial tom</b> </li>
-                              <li>
-                                <p>5-A kadStylexpoi aprtment,opp. vasan eye care,</p>
-                              </li>
-                              <li>
-                                <p>Risalabaar,City Road, deesa-405001.</p>
-                              </li>
-                              <li>
-                                <p>India</p>
-                              </li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                <div class="cart-total-table address-box commun-table">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Billing Address</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <ul>
-                              <li class="inner-heading"> <b>Denial tom</b> </li>
-                              <li>
-                                <p>5-A kadStylexpoi aprtment,opp. vasan eye care,</p>
-                              </li>
-                              <li>
-                                <p>Risalabaar,City Road, deesa-405001.</p>
-                              </li>
-                              <li>
-                                <p>India</p>
-                              </li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
+        <div class="col-12 mb-xs-30">
+          <div class="cart-item-table commun-table">
+            <div class="table-responsive">
+              <table class="compare-info">
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td class="image"> 
+                      <a href="product-detail.html"></a> 
+                      <img src="images/1.jpg" alt="Stylexpo" title="" class="img-thumbnail" /> 
+                    </td>
+                    <td class="image"> 
+                      <a href="product-detail.html"></a> 
+                      <img src="images/1.jpg" alt="Stylexpo" title="" class="img-thumbnail" />
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>Price</td>
+                      <td class="name">
+                        <a href="product-detail.html">$80.00</a>
+                      </td>
+                      <td class="name">
+                        <a href="product-detail.html">$80.00</a>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>Model</td>
+                      <td>Product 2</td>
+                      <td>Product 5</td>
+                  </tr>
+                  <tr>
+                      <td>Brand</td>
+                      <td>Lorem ipsum dolor sit amet,</td>
+                      <td>Lorem ipsum dolor sit amet,</td>
+                  </tr>
+                  <tr>
+                      <td>Availability</td>
+                      <td class="availability">In Stock</td>
+                      <td class="availability">In Stock</td>
+                  </tr>
+                  <tr>
+                    <td>Rating</td>
+                    <td class="rating"> 
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star fa-stack-2x"></i>
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span> 
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star fa-stack-2x"></i>
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span>
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star fa-stack-2x"></i>
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span> 
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star fa-stack-2x"></i>
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span> 
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span>
+                        <br /> Based on 2 reviews.
+                    </td>
+                    <td class="rating"> 
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star fa-stack-2x"></i>
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span> 
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star fa-stack-2x"></i>
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span> 
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star fa-stack-2x"></i>
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span> 
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star fa-stack-2x"></i>
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span> 
+                      <span class="fa fa-stack">
+                        <i class="fa fa-star-o fa-stack-2x"></i>
+                      </span>
+                      <br /> Based on 1 reviews.
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>Summary</td>
+                      <td class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum lacinia justo convallis ornare.</td>
+                      <td class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum lacinia justo convallis ornare.</td>
+                  </tr>
+                  <tr>
+                      <td>Weight</td>
+                      <td>0.00kg</td>
+                      <td>0.00kg</td>
+                  </tr>
+                  <tr>
+                      <td>Dimensions (L x W x H)</td>
+                      <td>0.00cm x 0.00cm x 0.00cm</td>
+                      <td>0.00mm x 0.00mm x 0.00mm</td>
+                  </tr>
+                </tbody>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button type="button" class="btn btn-black"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                    <button class="btn btn-color" type="button" title="Remove">Remove</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-black"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                    <button class="btn btn-color" type="button" title="Remove">Remove</button>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
@@ -1194,10 +1109,10 @@
   <div class="scroll-top">
     <div class="scrollup"></div>
   </div>
-  <!-- FOOTER END --> 
+  <!-- FOOTER END -->   
 </div>
-<script src="js/jquery-1.12.3.min.js"></script>
-<script src="../../../../cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script> 
+<script src="js/jquery-1.12.3.min.js"></script> 
+<script src="../../../../cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="js/bootstrap.min.js"></script>  
 <script src="js/jquery.downCount.js"></script>
 <script src="js/jquery-ui.min.js"></script> 
@@ -1207,5 +1122,5 @@
 <script src="js/custom.js"></script>
 </body>
 
-<!-- Mirrored from aaryaweb.info/html/stylexpo/stx002/order-overview.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Sep 2018 12:59:37 GMT -->
+<!-- Mirrored from aaryaweb.info/html/stylexpo/stx002/compare.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Sep 2018 12:58:56 GMT -->
 </html>

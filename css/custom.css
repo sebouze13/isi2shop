@@ -340,11 +340,12 @@ select {
 }
 
 .main-form input, .main-form textarea, .main-form select {
+	color: #666666;
 	background: #fff;
 	padding: 8px 15px;
 	width: 100%;
 	border: 1px solid #eeeeee;
-	min-height: 40px;
+	min-height: 20px;
 }
 
 .check-box label {

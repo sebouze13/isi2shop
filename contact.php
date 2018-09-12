@@ -4,13 +4,24 @@ $page_name = "Contact us";
 
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
+    $firstname = $_POST['firstname'];
+    $inquiry_theme = $_POST['question_theme'];
+    $mail = $_POST['email'];
     $message = $_POST['message'];
+    $gender = $_POST['gender'];
     $to = 'percia.sebastien@gmail.com';
-    $subject = 'the subject';
-    $msg = ' Thank you for contacting us!!
-  A specialist will contact you as soon as possible.<br/><br/>
-  Your message : ' .
+    $subject = 'Message from customer';
+    $msg = 'Hi webmaster!'
+        . "\r\n\r\n" .
+        'You have received a message from a customer:' . "\r\n" .
+        $firstname . ' ' . $name
+        . "\r\n" .
+        $mail . "\r\n\r\n" .
+        'Sexe : ' . $gender . "\r\n\r\n" .
+        'Inquiry theme : ' . $inquiry_theme . "\r\n\r\n" .
+        'His message : ' . "\r\n" .
         $message;
+
     $headers = 'From: webmaster@example.com' . "\r\n" .
         'Reply-To: webmaster@example.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
@@ -23,7 +34,8 @@ if(isset($_POST['submit'])){
                             </script>";
     }else{
         echo "<script type=\"text/javascript\">
-                                error(\"Your message has been sent successfully!\")
+                                error(\"There has been a problem... Message not sent\");
+                                window.location = '" . $_SERVER['PHP_SELF'] . "';
                             </script>";
     }
 }
@@ -66,7 +78,7 @@ require_once  'views/header.php';
                     <div class="contact-box">
                         <div class="contact-icon contact-mail-icon"></div>
                         <span><b>Mail</b></span>
-                        <p>infoservices@isi2shop.com </p>
+                        <p>info@isi2shop.com </p>
                     </div>
                 </div>
                 <div class="col-md-4 p-0">
@@ -97,12 +109,44 @@ require_once  'views/header.php';
                         <input type="text" required placeholder="Name" name="name">
                     </div>
                     <div class="col-md-4 mb-30">
-                        <input type="email" required placeholder="Email" name="email">
+                        <input type="text" required placeholder="Firstname" name="firstname">
                     </div>
                     <div class="col-md-4 mb-30">
-                        <input type="text" required placeholder="Website" name="website">
+                        <input type="email" required placeholder="Email" name="email">
                     </div>
+
+                    <div class="col-md-4 mb-30">
+                        <label for="question_theme">Your questions is about : </label>
+                        <select  name="question_theme">
+                            <option value="0" selected disabled hidden>-- Choose -- </option>
+                            <option value="Price">Price</option>
+                            <option value="Defect">Defect</option>
+                            <option value="Stock">Stock</option>
+                            <option value="Job">Job</option>
+                            <option value="Stores">Stores</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-12 mb-30">
+                        <label for="gender">You are? : </label>
+                        <div class="col-md-12 mb-30">
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" name="gender" id="male" value="male">
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" name="gender" id="female" value="female">
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" name="gender" id="other" value="other">
+                                <label class="form-check-label" for="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-12 mb-30">
+                        <label for="message">Leave your message : </label>
                         <textarea required placeholder="Message" rows="3" cols="30" name="message"></textarea>
                     </div>
                     <div class="col-12">

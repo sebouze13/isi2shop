@@ -2407,7 +2407,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .form-check-label {
-  padding-left: 1.25rem;
+  padding-left: 3rem;
   margin-bottom: 0;
   cursor: pointer;
 }
@@ -2415,7 +2415,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .form-check-input {
   position: absolute;
   margin-top: 0.25rem;
-  margin-left: -1.25rem;
+  margin-left: -2rem;
 }
 
 .form-check-input:only-child {

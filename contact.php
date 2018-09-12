@@ -212,8 +212,6 @@ require_once  'views/header.php';
 </section>
 <!-- News Letter End -->
 
-<!-- FOOTER START -->
 <?php
 require_once 'views/footer.php';
 ?>
-<!-- FOOTER END -->

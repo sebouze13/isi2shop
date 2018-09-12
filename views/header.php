@@ -30,8 +30,11 @@ $nb = count($prodWish);
 
 if(array_key_exists(OP_NAME, $_GET)){
     if ($_GET[OP_NAME] == OP_RETRAIT){
-        deleteFavoris($_SESSION[IDUSER], $_GET['id']);
-        header('Location:'.$_SERVER['PHP_SELF']);
+        deleteFavoris($_SESSION[IDUSER], $_GET['idProd']);
+        header('Location:'.$_SERVER['PHP_SELF'].'?idProd='.$_GET['idProd']);
+    }elseif ($_GET[OP_NAME] == OP_AJOUT){
+        addFavoris($_SESSION[IDUSER], $_GET['idProd']);
+        header('Location:'.$_SERVER['PHP_SELF'].'?idProd='.$_GET['idProd']);
     }
 }
 
@@ -146,7 +149,6 @@ if(array_key_exists(OP_NAME, $_GET)){
                                         <option value="<?=MEN?>">Men</option>
                                         <option value="<?=KID?>">Kid</option>
                                         <option value="<?=ELECTRO?>">Electro</option>
-
                                     </select>
                                 </fieldset>
                             </div>
@@ -192,9 +194,9 @@ if(array_key_exists(OP_NAME, $_GET)){
                                                             break;
                                                     }
                                                     ?>
-                                                    <li> <a class="close-cart" href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT , '&id=', $produit->id ?>"><i class="fa fa-times-circle"></i></a>
+                                                    <li> <a class="close-cart" href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT , '&idProd=', $produit->id ?>"><i class="fa fa-times-circle"></i></a>
                                                         <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/<?=$dossierImage . '/' . $produit->img?>"></a>
-                                                            <div class="media-body"> <span><a href="product-page.php?id=<?=$produit->id?>"><?=$produit->libelle?></a></span>
+                                                            <div class="media-body"> <span><a href="product-page.php?idProd=<?=$produit->id?>"><?=$produit->libelle?></a></span>
                                                                 <p class="cart-price">$<?=$produit->prix?></p>
                                                                 <div class="product-qty">
                                                                     <label>Qty:</label>

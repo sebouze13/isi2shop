@@ -95,7 +95,7 @@ switch($produit->getIdCat()){
                                             </form>
                                             <div class="bottom-detail">
                                                 <ul>
-                                                    <li class="pro-wishlist-icon"><a href="wishlist.php"><span></span>Wishlist</a></li>
+                                                    <li class="pro-wishlist-icon"><a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_AJOUT , '&idProd=', $produit->id ?>"><span></span>Wishlist</a></li>
                                                 </ul>
                                             </div>
                                             <div class="share-link">

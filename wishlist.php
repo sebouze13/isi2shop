@@ -66,7 +66,7 @@ $prodWish = getAllFavoris();
                                         <tbody>
                                         <tr>
                                             <td>
-                                                <a href="product-page.php">
+                                                <a href="product-page.php?idProd=<?=$produit->id?>">
                                                     <div class="product-image"><img alt="Stylexpo" src="images/<?=$dossierImage . '/' . $produit->img?>"></div>
                                                 </a>
                                             </td>
@@ -94,7 +94,7 @@ $prodWish = getAllFavoris();
                                                 </div>
                                             </td>
                                             <td>
-                                                <a href="deleteFav.php?id=<?= $produit->id?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
+                                                <a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT , '&idProd=', $produit->id ?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
                                             </td>
                                         </tr>
                                         </tbody>

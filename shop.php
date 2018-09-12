@@ -11,16 +11,34 @@ if(array_key_exists("categ", $_GET)){
 } else {
     $categorie = "all";
 }
+
+switch ($categorie){
+    case MEN:
+        $dossierImage = MEN;
+        break;
+    case WOMEN:
+        $dossierImage = WOMEN;
+        break;
+    case KID:
+        $dossierImage = KID;
+        break;
+    case ELECTRO:
+        $dossierImage = ELECTRO;
+        break;
+    default:
+        $dossierImage = "All";
+        break;
+}
 ?>
 <!-- Bread Crumb STRAT -->
 <div class="banner inner-banner1 ">
     <div class="container">
         <section class="banner-detail center-xs">
-            <h1 class="banner-title">Women</h1>
+            <h1 class="banner-title"><?=$dossierImage?></h1>
             <div class="bread-crumb right-side float-none-xs">
                 <ul>
                     <li><a href="index.php">Home</a>/</li>
-                    <li><span>Women</span></li>
+                    <li><span><?=$dossierImage?></span></li>
                 </ul>
             </div>
         </section>
@@ -40,12 +58,11 @@ if(array_key_exists("categ", $_GET)){
                         </div>
                         <div class="sidebar-contant">
                             <ul>
-                                <li><a href="#">Clothing <span>(21)</span></a></li>
-                                <li><a href="#">Shoes <span>(05)</span></a></li>
-                                <li><a href="#">Jewellery <span>(10)</span></a></li>
-                                <li><a href="#">Furniture <span>(12)</span></a></li>
-                                <li><a href="#">Bags <span>(18)</span></a></li>
-                                <li><a href="#">Accessories <span>(70)</span></a></li>
+                                <li><a href="shop.php">All</a></li>
+                                <li><a href="shop.php?categ=<?=WOMEN?>"><?=WOMEN?></a></li>
+                                <li><a href="shop.php?categ=<?=MEN?>"><?=MEN?></a></li>
+                                <li><a href="shop.php?categ=<?=KID?>"><?=KID?>></a></li>
+                                <li><a href="shop.php?categ=<?=ELECTRO?>"><?=ELECTRO?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -161,20 +178,6 @@ if(array_key_exists("categ", $_GET)){
                                     </a>
                                 </div>
                             </div>
-                            <div class="short-by float-right-sm"> <span>Sort By :</span>
-                                <div class="select-item select-dropdown">
-                                    <fieldset>
-                                        <select  name="speed" id="sort-price" class="option-drop">
-                                            <option value="" selected="selected">Name (A to Z)</option>
-                                            <option value="">Name(Z - A)</option>
-                                            <option value="">price(low&gt;high)</option>
-                                            <option value="">price(high &gt; low)</option>
-                                            <option value="">rating(highest)</option>
-                                            <option value="">rating(lowest)</option>
-                                        </select>
-                                    </fieldset>
-                                </div>
-                            </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="show-item right-side float-left-sm"> <span>Show :</span>
@@ -188,7 +191,6 @@ if(array_key_exists("categ", $_GET)){
                                     </fieldset>
                                 </div>
                                 <span>Per Page</span>
-                                <div class="compare float-right-sm"> <a href="#" class="btn btn-color">Compare (0)</a> </div>
                             </div>
                         </div>
                     </div>
@@ -251,7 +253,9 @@ if(array_key_exists("categ", $_GET)){
                                                     <div class="detail-inner-left align-center">
                                                         <ul>
                                                             <li class="pro-cart-icon">
-                                                                <form>
+                                                                <form action="addPanier.php" method="get">
+                                                                    <input type="hidden" name="id" value="<?=$value->id?>">
+                                                                    <input type="hidden" name="qte" value="1">
                                                                     <button title="Add to Cart"><span></span>Add to Cart
                                                                     </button>
                                                                 </form>
@@ -271,8 +275,8 @@ if(array_key_exists("categ", $_GET)){
                                         </div>
                                     </div>
                                     <?php
-                                        } else {
-                                            if($idCategorie == $value->id_cat){
+                                } else {
+                                    if($idCategorie == $value->id_cat){
                                         ?>
 
                                         <div class="col-md-4 col-6 mb-30">
@@ -284,12 +288,14 @@ if(array_key_exists("categ", $_GET)){
                                                         <div class="detail-inner-left align-center">
                                                             <ul>
                                                                 <li class="pro-cart-icon">
-                                                                    <form>
+                                                                    <form action="addPanier.php" method="get">
+                                                                        <input type="hidden" name="id" value="<?=$value->id?>">
+                                                                        <input type="hidden" name="qte" value="1">
                                                                         <button title="Add to Cart"><span></span>Add to Cart
                                                                         </button>
                                                                     </form>
                                                                 </li>
-                                                                <li class="pro-wishlist-icon "><a href="addFav.php?id=<?= $value->id?>"
+                                                                <li class="pro-wishlist-icon "><a href="functions/addFav.php?id=<?= $value->id?>"
                                                                                                   title="Wishlist"></a></li>
                                                             </ul>
                                                         </div>

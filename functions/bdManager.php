@@ -89,13 +89,19 @@ function addFavoris($id_user, $id_produit){
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $insertFavoris = "INSERT INTO favoris ('id_user', 'id_produit')
-VALUES (" . $id_user . "," . $id_produit . ")";
+    $insertFavoris = "INSERT INTO favoris (id_user, id_produit)
+VALUES ( $id_user , $id_produit)";
 
-    if ($conn->query($insertFavoris) === TRUE) {
-        echo "New record created successfully";
+    if (mysqli_query($conn, $insertFavoris)) {
+        echo "<script type=\"text/javascript\">
+                                error(\"SUCCES\");
+                                window.location = '" . $_SERVER['PHP_SELF'] . "';
+                            </script>";
     } else {
-        echo "Error: " . $insertFavoris . "<br>" . $conn->error;
+        echo "<script type=\"text/javascript\">
+                                error(\"There has been a problem... Message not sent\");
+                                window.location = '" . $_SERVER['PHP_SELF'] . "';
+                            </script>";
     }
 
     $conn->close();
@@ -119,13 +125,13 @@ function getAllFavoris(){
     $selectFavoris = "SELECT * FROM favoris";
     $result = $conn->query($selectFavoris);
 
-    if (mysqli_num_rows($result) > 0) {
-        while($row = mysqli_fetch_assoc($result)) {
-            $prod = new Produit($row["id"], $row["id_cat"], $row["libelle"], $row["description"], $row["img"], $row["prix"], $row["qte_dispo"]);
-            array_push($retour, $prod);
-        }
-    }
-    return $retour;
+    //  if (mysqli_num_rows($result) > 0) {
+    //      while($row = mysqli_fetch_assoc($result)) {
+    //          $prod = new Produit($row["id"], $row["id_cat"], $row["libelle"], $row["description"], $row["img"], $row["prix"], $row["qte_dispo"]);
+    //          array_push($retour, $prod);
+    //       }
+    //   }
+    //  return $retour;
 
     $conn->close();
 }
@@ -148,7 +154,6 @@ function deleteFavoris($id_user, $id_produit){
     $deleteFavoris = "DELETE FROM favoris WHERE id_user='" . $id_user . "' and id_produit ='" . $id_produit . "'";
 
     if ($conn->query($deleteFavoris) === TRUE) {
-        echo "Record deleted successfully";
     } else {
         echo "Error deleting record: " . $conn->error;
     }

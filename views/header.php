@@ -66,7 +66,7 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
 </head>
 
 <body class="homepage">
-<div class="se-pre-con"></div>
+<!--<div class="se-pre-con"></div>-->
 
 <div class="main">
 

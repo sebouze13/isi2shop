@@ -1,7 +1,7 @@
 <?php
 
 require_once "constantes.php";
-require_once "../classes/produit.php";
+require_once "classes/produit.php";
 
 if ( session_status() === PHP_SESSION_NONE ) {
     session_start();
@@ -67,7 +67,7 @@ function getAllProduct(){
     $result = mysqli_query($conn, $selectProducts);
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
-            $prod = new Produit(row["id"], row["id_cat"], row["libelle"], row["description"], row["img"], row["prix"], row["qte_dispo"]);
+            $prod = new Produit($row["id"], $row["id_cat"], $row["libelle"], $row["description"], $row["img"], $row["prix"], $row["qte_dispo"]);
             array_push($retour, $prod);
         }
     }

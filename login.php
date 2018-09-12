@@ -2,9 +2,14 @@
 require_once "functions/bdManager.php";
 require_once "functions/constantes.php";
 
+$visibilityError = 'style="visibility:hidden;"';
+
 if(array_key_exists(CONNEXION_LOGIN, $_POST) && array_key_exists(CONNEXION_PASS, $_POST)){
     if(login($_POST[CONNEXION_LOGIN], $_POST[CONNEXION_PASS])){
-        header("Location: index.html");
+        header("Location: index.php");
+        exit;
+    } else {
+        $visibilityError = "";
     }
 }
 ?>
@@ -851,6 +856,11 @@ if(array_key_exists(CONNEXION_LOGIN, $_POST) && array_key_exists(CONNEXION_PASS,
             <div class="col-xl-6 col-lg-8 col-md-8 ">
               <form class="main-form full" method="post" action="<?= $_SERVER['PHP_SELF']?>">
                 <div class="row">
+                    <div class="col-12" <?=$visibilityError?>>
+                        <div class="alert alert-danger" >
+                            Incorrect Login or password !
+                        </div>
+                    </div>
                   <div class="col-12 mb-20">
                     <div class="heading-part heading-bg">
                       <h2 class="heading">Customer Login</h2>

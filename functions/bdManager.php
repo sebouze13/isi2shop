@@ -2,6 +2,10 @@
 
 require_once "constantes.php";
 
+if ( session_status() === PHP_SESSION_NONE ) {
+    session_start();
+}
+
 $servername = SERVERNAME;
 $username = USERNAMEBD;
 $password = PASSWORDBD;
@@ -27,6 +31,7 @@ function login($login, $pwd){
     if (mysqli_num_rows($result) > 0) {
         if($row = mysqli_fetch_assoc($result)) {
             if($row["login"] == $login && $row["pwd"] == $pwd){
+                $_SESSION["idUser"] = $row["id"];
                 $retour = true;
             }
         }
@@ -36,5 +41,9 @@ function login($login, $pwd){
     return $retour;
 }
 
+function logout(){
+    session_abort();
+    header("Location:index.php");
+}
 
 

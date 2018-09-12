@@ -1,5 +1,36 @@
 <?php
 $page_name = "Contact us";
+
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $message = $_POST['message'];
+    $to = 'percia.sebastien@gmail.com';
+    $subject = 'the subject';
+    $msg = ' Thank you for contacting us!!
+  A specialist will contact you as soon as possible.<br/><br/>
+  Your message : ' .
+        $message;
+    $headers = 'From: webmaster@example.com' . "\r\n" .
+        'Reply-To: webmaster@example.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    mail($to, $subject, $msg, $headers);
+    if(mail($to, $subject, $msg, $headers) == true){
+        echo "<script type=\"text/javascript\">
+                                alert (\"Your message has been sent successfully!\");
+                                window.location = 'index.php';
+                            </script>";
+    }else{
+        echo "<script type=\"text/javascript\">
+                                error(\"Your message has been sent successfully!\")
+                            </script>";
+    }
+}
+
+?>
+
+<?php
 require_once  'views/header.php';
 ?>
 
@@ -60,7 +91,7 @@ require_once  'views/header.php';
             </div>
         </div>
         <div class="main-form">
-            <form action="http://aaryaweb.info/html/stylexpo/stx002/contact-form-handler.php" method="POST" name="contactform">
+            <form action="" method="POST" name="contactform">
                 <div class="row">
                     <div class="col-md-4 mb-30">
                         <input type="text" required placeholder="Name" name="name">

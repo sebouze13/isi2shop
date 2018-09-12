@@ -11,5 +11,10 @@ define("DBNAME", "isi2shop");
 define("CONNEXION_LOGIN", "login-email");
 define("CONNEXION_PASS", "login-pass");
 
+// autres
 define("IDUSER", "idUser");
+define("WOMEN", "women");
+define("MEN", "men");
+define("KID", "kid");
+define("ELECTRO", "electro");
 

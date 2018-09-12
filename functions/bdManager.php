@@ -1,6 +1,7 @@
 <?php
 
 require_once "constantes.php";
+require_once "../classes/produit.php";
 
 if ( session_status() === PHP_SESSION_NONE ) {
     session_start();
@@ -26,7 +27,7 @@ function login($login, $pwd){
         die("Connection failed: ". mysqli_connect_error());
     }
 
-    $selectUser = "SELECT login, pwd FROM user WHERE login='".$login."' AND pwd='".$pwd."'";
+    $selectUser = "SELECT * FROM user WHERE login='".$login."' AND pwd='".$pwd."'";
     $result = mysqli_query($conn, $selectUser);
     if (mysqli_num_rows($result) > 0) {
         if($row = mysqli_fetch_assoc($result)) {
@@ -46,4 +47,32 @@ function logout(){
     header("Location:index.php");
 }
 
+
+function getAllProduct(){
+    global $servername;
+    global $username;
+    global $password;
+    global $dbname;
+
+    $retour = array();
+
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: ". mysqli_connect_error());
+    }
+
+    $selectProducts = "SELECT * FROM produit";
+    $result = mysqli_query($conn, $selectProducts);
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $prod = new Produit(row["id"], row["id_cat"], row["libelle"], row["description"], row["img"], row["prix"], row["qte_dispo"]);
+            array_push($retour, $prod);
+        }
+    }
+
+    mysqli_close($conn);
+    return $retour;
+}
 

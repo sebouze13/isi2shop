@@ -1,6 +1,12 @@
 <?php
     $page_name = "SHOP";
     require_once  'views/header.php';
+
+    if(array_key_exists("categ", $_GET)){
+        $categorie = $_GET["categ"];
+    } else {
+        $categorie = "all";
+    }
 ?>  
   <!-- Bread Crumb STRAT -->
   <div class="banner inner-banner1 ">

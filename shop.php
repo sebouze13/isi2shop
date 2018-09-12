@@ -260,7 +260,7 @@ switch ($categorie){
                                                                     </button>
                                                                 </form>
                                                             </li>
-                                                            <li class="pro-wishlist-icon "><a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_AJOUT , '&idProd=', $produit->id ?>"
+                                                            <li class="pro-wishlist-icon "><a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_AJOUT , '&idProd=', $value->id ?>"
                                                                                               title="Wishlist"></a></li>
                                                         </ul>
                                                     </div>
@@ -295,7 +295,7 @@ switch ($categorie){
                                                                         </button>
                                                                     </form>
                                                                 </li>
-                                                                <li class="pro-wishlist-icon "><a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_AJOUT , '&idProd=', $produit->id ?>"
+                                                                <li class="pro-wishlist-icon "><a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_AJOUT , '&idProd=', $value->id ?>"
                                                                                                   title="Wishlist"></a></li>
                                                             </ul>
                                                         </div>

@@ -244,7 +244,7 @@ if(array_key_exists("categ", $_GET)){
                                     ?>
                                     <div class="col-md-4 col-6 mb-30">
                                         <div class="product-item">
-                                            <div class="product-image"><a href="product-page.php"> <img
+                                            <div class="product-image"><a href="product-page.php?idProd=<?=$value->id?>"> <img
                                                             src="images/<?= $dossierImage . "/" . $value->img ?>"
                                                             alt="Stylexpo"> </a>
                                                 <div class="product-detail-inner">
@@ -258,15 +258,13 @@ if(array_key_exists("categ", $_GET)){
                                                             </li>
                                                             <li class="pro-wishlist-icon "><a href="functions/addFav.php?id=<?= $value->id?>"
                                                                                               title="Wishlist"></a></li>
-                                                            <li class="pro-compare-icon"><a href="compare.php"
-                                                                                            title="Compare"></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="product-item-details">
                                                 <div class="product-item-name"><a
-                                                            href="product-page.php"><?= $value->libelle ?></a></div>
+                                                            href="product-page.php?idProd=<?=$value->id?>"><?= $value->libelle ?></a></div>
                                                 <div class="price-box"><span class="price">$<?= $value->prix ?></span>
                                                 </div>
                                             </div>
@@ -279,7 +277,7 @@ if(array_key_exists("categ", $_GET)){
 
                                         <div class="col-md-4 col-6 mb-30">
                                             <div class="product-item">
-                                                <div class="product-image"><a href="product-page.php"> <img
+                                                <div class="product-image"><a href="product-page.php?idProd=<?=$value->id?>"> <img
                                                                 src="images/<?= $dossierImage . "/" . $value->img ?>"
                                                                 alt="Stylexpo"> </a>
                                                     <div class="product-detail-inner">
@@ -293,15 +291,13 @@ if(array_key_exists("categ", $_GET)){
                                                                 </li>
                                                                 <li class="pro-wishlist-icon "><a href="wishlist.php"
                                                                                                   title="Wishlist"></a></li>
-                                                                <li class="pro-compare-icon"><a href="compare.php"
-                                                                                                title="Compare"></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="product-item-details">
                                                     <div class="product-item-name"><a
-                                                                href="product-page.php"><?= $value->libelle ?></a></div>
+                                                                href="product-page.php?idProd=<?=$value->id?>"><?= $value->libelle ?></a></div>
                                                     <div class="price-box"><span class="price">$<?= $value->prix ?></span>
                                                     </div>
                                                 </div>

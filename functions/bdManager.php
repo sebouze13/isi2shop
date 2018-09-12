@@ -76,6 +76,33 @@ function getAllProduct(){
     return $retour;
 }
 
+function getProdById($id){
+    global $servername;
+    global $username;
+    global $password;
+    global $dbname;
+
+    $retour = null;
+
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: ". mysqli_connect_error());
+    }
+
+    $selectProduct = "SELECT * FROM produit WHERE id=$id";
+    $result = mysqli_query($conn, $selectProduct);
+    if (mysqli_num_rows($result) > 0) {
+        if($row = mysqli_fetch_assoc($result)) {
+            $retour = new Produit($row["id"], $row["id_cat"], $row["libelle"], $row["description"], $row["img"], $row["prix"], $row["qte_dispo"]);
+        }
+    }
+
+    mysqli_close($conn);
+    return $retour;
+}
+
 function addFavoris($id_user, $id_produit){
     global $servername;
     global $username;

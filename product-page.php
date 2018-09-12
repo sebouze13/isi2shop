@@ -1,6 +1,17 @@
 <?php
 $page_name = "Product page";
 require_once  'views/header.php';
+require_once "functions/constantes.php";
+require_once "functions/bdManager.php";
+
+$produit = null;
+
+if(array_key_exists("idProd", $_GET)){
+    $id = $_GET["idProd"];
+    $produit = getProdById($id);
+} else {
+    header("Location:index.php");
+}
 ?>
 
 <!-- Bread Crumb STRAT -->
@@ -26,14 +37,14 @@ require_once  'views/header.php';
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-5 col-md-5 mb-xs-30">
-              <div class="fotorama" data-nav="thumbs" data-allowfullscreen="native"> <a href="#"><img src="images/1.jpg" alt="Stylexpo"></a> <a href="#"><img src="images/2.jpg" alt="Stylexpo"></a> <a href="#"><img src="images/3.jpg" alt="Stylexpo"></a> <a href="#"><img src="images/4.jpg" alt="Stylexpo"></a> <a href="#"><img src="images/5.jpg" alt="Stylexpo"></a> <a href="#"><img src="images/6.jpg" alt="Stylexpo"></a> <a href="#"><img src="images/4.jpg" alt="Stylexpo"></a> <a href="#"><img src="images/5.jpg" alt="Stylexpo"></a> <a href="#"><img src="images/6.jpg" alt="Stylexpo"></a> </div>
+              <img src="images/men/1.jpg" alt="Stylexpo">
             </div>
             <div class="col-lg-7 col-md-7">
               <div class="row">
                 <div class="col-12">
                   <div class="product-detail-main">
                     <div class="product-item-details">
-                      <h1 class="product-item-name">Cross Colours Camo Print Tank half mengo</h1>
+                      <h1 class="product-item-name"><?=$produit->getLibelle()?></h1>
                       <div class="price-box"> <span class="price">$80.00</span>
                       <div class="product-info-stock-sku">
                         <div>
@@ -41,7 +52,7 @@ require_once  'views/header.php';
                           <span class="info-deta">In stock</span> 
                         </div>
                       </div>
-                      <p>Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada </p>
+                        <p><?=$produit->getDescription()?></p>
                       <div class="mb-20">
                         <div class="product-qty">
                           <label for="qty">Qty:</label>

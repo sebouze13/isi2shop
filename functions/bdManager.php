@@ -42,11 +42,6 @@ function login($login, $pwd){
     return $retour;
 }
 
-function logout(){
-    session_abort();
-    header("Location:index.php");
-}
-
 
 function getAllProduct(){
     global $servername;
@@ -101,6 +96,26 @@ function getProdById($id){
 
     mysqli_close($conn);
     return $retour;
+}
+
+function addPanier($id_user, $id_produit, $qte){
+    global $servername;
+    global $username;
+    global $password;
+    global $dbname;
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $insertFavoris = "INSERT INTO pannier (id_user, id_produit, qte) VALUES ( $id_user , $id_produit, $qte)";
+
+    mysqli_query($conn, $insertFavoris);
+
+    $conn->close();
 }
 
 function addFavoris($id_user, $id_produit){

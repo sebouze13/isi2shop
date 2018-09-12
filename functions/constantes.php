@@ -5,7 +5,9 @@ define("SERVERNAME", "localhost");
 define("USERNAMEBD", "root");
 define("PASSWORDBD", "abc123...");
 define("DBNAME", "isi2shop");
-
+define('OP_NAME', 'op');
+define('OP_AJOUT', 'add');
+define('OP_RETRAIT', 'del');
 
 // Champs formulaires
 define("CONNEXION_LOGIN", "login-email");

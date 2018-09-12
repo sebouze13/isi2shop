@@ -2,8 +2,10 @@
 $page_name = "My wishlist";
 require_once  'views/header.php';
 require_once  'functions/bdManager.php';
+require_once  'classes/produit.php';
 
 $prodWish = getAllFavoris();
+
 ?>
 
     <!-- Bread Crumb STRAT -->
@@ -40,42 +42,67 @@ $prodWish = getAllFavoris();
                                 </tr>
                                 </thead>
 
-                                <?php if(count($prodWish) != 0 ){
-
-                                    ?>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <a href="product-page.php">
-                                                <div class="product-image"><img alt="Stylexpo" src="images/1.jpg"></div>
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <div class="product-title">
-                                                <a href="product-page.php">Cross Colours Camo Print Tank half mengo</a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    <div class="base-price price-box"> <span class="price">$80.00</span> </div>
-                                                </li>
-                                            </ul>
-                                        </td>
-                                        <td>
-                                            <div class="total-price price-box">
-                                                <span class="price">In Stock</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                    <?php
+                                <?php if(count($prodWish) > 0 ){
+                                    foreach ($prodWish as $value) {
+                                        $prod = $value->id_produit;
+                                        $produit = getProdById($prod);
+                                        switch($produit->id_cat){
+                                            case 1:
+                                                $dossierImage = MEN;
+                                                break;
+                                            case 2:
+                                                $dossierImage = WOMEN;
+                                                break;
+                                            case 3:
+                                                $dossierImage = KID;
+                                                break;
+                                            case 4:
+                                                $dossierImage = ELECTRO;
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                        ?>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="product-page.php">
+                                                    <div class="product-image"><img alt="Stylexpo" src="images/<?=$dossierImage . '/' . $produit->img?>"></div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="product-title">
+                                                    <a href="product-page.php"><?=$produit->libelle?></a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>
+                                                        <div class="base-price price-box"><span class="price">$<?=$produit->prix?></span></div>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <div class="total-price price-box">
+                                                        <span class="price">
+                                                            <?php if($produit->qte_dispo > 0){
+                                                                echo 'In Stock';
+                                                            }else{
+                                                                echo'Out of Stock';
+                                                            }?>
+                                                        </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="deleteFav.php?id=<?= $produit->id?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                        <?php
+                                    }
                                 }else{
 
-                                ?>
+                                    ?>
                                     <tbody>
                                     <tr>
                                         <td>
@@ -93,7 +120,7 @@ $prodWish = getAllFavoris();
                                         </td>
                                     </tr>
                                     </tbody>
-    <?php
+                                    <?php
                                 }
 
                                 ?>

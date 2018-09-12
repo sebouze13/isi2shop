@@ -256,7 +256,7 @@ if(array_key_exists("categ", $_GET)){
                                                                     </button>
                                                                 </form>
                                                             </li>
-                                                            <li class="pro-wishlist-icon "><a href="functions/addFav.php?id=<?= $value->id?>"
+                                                            <li class="pro-wishlist-icon "><a href="addFav.php?id=<?= $value->id?>"
                                                                                               title="Wishlist"></a></li>
                                                         </ul>
                                                     </div>
@@ -289,7 +289,7 @@ if(array_key_exists("categ", $_GET)){
                                                                         </button>
                                                                     </form>
                                                                 </li>
-                                                                <li class="pro-wishlist-icon "><a href="wishlist.php"
+                                                                <li class="pro-wishlist-icon "><a href="addFav.php?id=<?= $value->id?>"
                                                                                                   title="Wishlist"></a></li>
                                                             </ul>
                                                         </div>

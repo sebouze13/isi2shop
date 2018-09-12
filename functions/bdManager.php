@@ -2,6 +2,7 @@
 
 require_once "constantes.php";
 require_once "classes/produit.php";
+require_once "classes/favoris.php";
 
 if ( session_status() === PHP_SESSION_NONE ) {
     session_start();
@@ -120,15 +121,9 @@ function addFavoris($id_user, $id_produit){
 VALUES ( $id_user , $id_produit)";
 
     if (mysqli_query($conn, $insertFavoris)) {
-        echo "<script type=\"text/javascript\">
-                                error(\"SUCCES\");
-                                window.location = '" . $_SERVER['PHP_SELF'] . "';
-                            </script>";
+        return true;
     } else {
-        echo "<script type=\"text/javascript\">
-                                error(\"There has been a problem... Message not sent\");
-                                window.location = '" . $_SERVER['PHP_SELF'] . "';
-                            </script>";
+        return false;
     }
 
     $conn->close();
@@ -152,13 +147,13 @@ function getAllFavoris(){
     $selectFavoris = "SELECT * FROM favoris";
     $result = $conn->query($selectFavoris);
 
-    //  if (mysqli_num_rows($result) > 0) {
-    //      while($row = mysqli_fetch_assoc($result)) {
-    //          $prod = new Produit($row["id"], $row["id_cat"], $row["libelle"], $row["description"], $row["img"], $row["prix"], $row["qte_dispo"]);
-    //          array_push($retour, $prod);
-    //       }
-    //   }
-    //  return $retour;
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $fav = new Favoris($row["id_user"], $row["id_produit"]);
+            array_push($retour, $fav);
+        }
+    }
+    return $retour;
 
     $conn->close();
 }
@@ -178,7 +173,7 @@ function deleteFavoris($id_user, $id_produit){
     }
 
     // sql to delete a record
-    $deleteFavoris = "DELETE FROM favoris WHERE id_user='" . $id_user . "' and id_produit ='" . $id_produit . "'";
+    $deleteFavoris = "DELETE FROM favoris WHERE id_user=$id_user and id_produit = $id_produit";
 
     if ($conn->query($deleteFavoris) === TRUE) {
     } else {

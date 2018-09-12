@@ -1,5 +1,6 @@
 <?php
 require_once "functions/constantes.php";
+require_once "functions/bdManager.php";
 
 if ( session_status() === PHP_SESSION_NONE ) {
     session_start();
@@ -22,6 +23,19 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
                                     </ul>
                                 </div>";
 }
+
+$prodWish = getAllFavoris();
+
+$nb = count($prodWish);
+
+if(array_key_exists(OP_NAME, $_GET)){
+    if ($_GET[OP_NAME] == OP_RETRAIT){
+        deleteFavoris($_SESSION[IDUSER], $_GET['id']);
+        header('Location:'.$_SERVER['PHP_SELF']);
+    }
+}
+
+
 
 ?>
 <!DOCTYPE html>
@@ -155,6 +169,59 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
                                     <a href="wishlist.php">
                                         <span></span>
                                     </a>
+                                    <div class="cart-dropdown header-link-dropdown">
+                                        <ul class="cart-list link-dropdown-list">
+                                            <?php if(count($prodWish) > 0 ){
+                                                foreach ($prodWish as $value) {
+                                                    $prod = $value->id_produit;
+                                                    $produit = getProdById($prod);
+                                                    switch($produit->id_cat){
+                                                        case 1:
+                                                            $dossierImage = MEN;
+                                                            break;
+                                                        case 2:
+                                                            $dossierImage = WOMEN;
+                                                            break;
+                                                        case 3:
+                                                            $dossierImage = KID;
+                                                            break;
+                                                        case 4:
+                                                            $dossierImage = ELECTRO;
+                                                            break;
+                                                        default:
+                                                            break;
+                                                    }
+                                                    ?>
+                                                    <li> <a class="close-cart" href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT , '&id=', $produit->id ?>"><i class="fa fa-times-circle"></i></a>
+                                                        <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/<?=$dossierImage . '/' . $produit->img?>"></a>
+                                                            <div class="media-body"> <span><a href="product-page.php?id=<?=$produit->id?>"><?=$produit->libelle?></a></span>
+                                                                <p class="cart-price">$<?=$produit->prix?></p>
+                                                                <div class="product-qty">
+                                                                    <label>Qty:</label>
+                                                                    <div class="custom-qty">
+                                                                        <?php if($produit->qte_dispo > 0){
+                                                                            echo 'In Stock';
+                                                                        }else{
+                                                                            echo'Out of Stock';
+                                                                        }?>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <?php
+                                                }
+                                            }else{
+                                                ?>
+                                                <p>No product in wishlist</p>
+                                                <?php
+                                            }
+
+                                            ?>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                        <div class="mt-20"> <a href="shop.php" class="btn-color btn">Shop</a> <a href="wishlist.php" class="btn-color btn right-side">My wishlist</a> </div>
+                                    </div>
                                 </li>
                                 <li class="cart-icon"> <a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
                                     <div class="cart-dropdown header-link-dropdown">

@@ -61,7 +61,7 @@ switch ($categorie){
                                 <li><a href="shop.php">All</a></li>
                                 <li><a href="shop.php?categ=<?=WOMEN?>"><?=WOMEN?></a></li>
                                 <li><a href="shop.php?categ=<?=MEN?>"><?=MEN?></a></li>
-                                <li><a href="shop.php?categ=<?=KID?>"><?=KID?>></a></li>
+                                <li><a href="shop.php?categ=<?=KID?>"><?=KID?></a></li>
                                 <li><a href="shop.php?categ=<?=ELECTRO?>"><?=ELECTRO?></a></li>
                             </ul>
                         </div>

@@ -25,8 +25,10 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
 }
 
 $prodWish = getAllFavoris();
-
 $nb = count($prodWish);
+
+$panier = getPanier($_SESSION[IDUSER]);
+$nb2 = count($panier);
 
 if(array_key_exists(OP_NAME, $_GET)){
     if ($_GET[OP_NAME] == OP_RETRAIT){
@@ -228,32 +230,48 @@ if(array_key_exists(OP_NAME, $_GET)){
                                 <li class="cart-icon"> <a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
                                     <div class="cart-dropdown header-link-dropdown">
                                         <ul class="cart-list link-dropdown-list">
+                                            <?php if(count($panier) > 0 ){
+                                            foreach ($panier as $value) {
+                                            $prod = $value->idProd;
+                                            $produit = getProdById($prod);
+                                            switch($produit->id_cat){
+                                                case 1:
+                                                    $dossierImage = MEN;
+                                                    break;
+                                                case 2:
+                                                    $dossierImage = WOMEN;
+                                                    break;
+                                                case 3:
+                                                    $dossierImage = KID;
+                                                    break;
+                                                case 4:
+                                                    $dossierImage = ELECTRO;
+                                                    break;
+                                                default:
+                                                    break;
+                                            }
+                                            ?>
                                             <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                                                <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/1.jpg"></a>
-                                                    <div class="media-body"> <span><a href="#">Black African Print Skirt</a></span>
-                                                        <p class="cart-price">$14.99</p>
+                                                <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/<?=$dossierImage."/".$produit->img?>"></a>
+                                                    <div class="media-body"> <span><a href="#"><?=$produit->libelle?></a></span>
+                                                        <p class="cart-price">$<?=$produit->prix?></p>
                                                         <div class="product-qty">
                                                             <label>Qty:</label>
                                                             <div class="custom-qty">
-                                                                <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+                                                                <label><?=$value->qte?></label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                                                <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/2.jpg"></a>
-                                                    <div class="media-body"> <span><a href="#">Black African Print Skirt</a></span>
-                                                        <p class="cart-price">$14.99</p>
-                                                        <div class="product-qty">
-                                                            <label>Qty:</label>
-                                                            <div class="custom-qty">
-                                                                <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            <?php
+                                                    }
+                                                }else{
+                                            ?>
+                                            <p>No product in cart</p>
+                                            <?php
+                                                }
+                                            ?>
                                         </ul>
                                         <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
                                         <div class="clearfix"></div>

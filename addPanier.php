@@ -16,8 +16,8 @@ if(array_key_exists('id', $_GET)){
         addPanier($_SESSION[IDUSER], $_GET['id'], $_GET['qte']);
     }
 } else {
-    //header("Location:shop.php");
+    header("Location:shop.php");
 }
 
-//header("Location:cart.php");
+header("Location:cart.php");
 

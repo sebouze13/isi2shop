@@ -1,6 +1,16 @@
 <?php
 $page_name = "My cart";
 require_once  'views/header.php';
+
+require_once  'functions/bdManager.php';
+require_once  'functions/constantes.php';
+require_once  'classes/produit.php';
+
+$panier = null;
+
+if ( array_key_exists(IDUSER, $_SESSION)) {
+    $panier = getPanier($_SESSION[IDUSER]);
+}
 ?>
   
   <!-- Bread Crumb STRAT -->
@@ -38,24 +48,47 @@ require_once  'views/header.php';
                   </tr>
                 </thead>
                 <tbody>
+                <?php
+                    if(count($panier) > 0 ){
+                        foreach ($panier as $value) {
+                            $idProd = $value->idProd;
+                            $produit = getProdById($idProd);
+                            switch($produit->id_cat){
+                                case 1:
+                                    $dossierImage = MEN;
+                                    break;
+                                case 2:
+                                    $dossierImage = WOMEN;
+                                    break;
+                                case 3:
+                                    $dossierImage = KID;
+                                    break;
+                                case 4:
+                                    $dossierImage = ELECTRO;
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                ?>
                   <tr>
                     <td>
                       <a href="product-page.php">
                         <div class="product-image">
-                          <img alt="Stylexpo" src="images/1.jpg">
+                          <img alt="Stylexpo" src="images/<?=$dossierImage."/".$produit->getImg()?>">
                         </div>
                       </a>
                     </td>
                     <td>
                       <div class="product-title"> 
-                        <a href="product-page.php">Cross Colours Camo Print Tank half mengo</a>
+                        <a href="product-page.php"><?=$produit->getLibelle()?></a>
                       </div>
                     </td>
                     <td>
                       <ul>
                         <li>
                           <div class="base-price price-box"> 
-                            <span class="price">$80.00</span> 
+                            <span class="price">$<?=$produit->getPrix()?></span>
                           </div>
                         </li>
                       </ul>
@@ -64,7 +97,7 @@ require_once  'views/header.php';
                       <div class="input-box select-dropdown">
                         <fieldset>
                           <select data-id="100" class="quantity_cart option-drop" name="quantity_cart">
-                            <option selected="" value="1">1</option>
+                            <option selected="" value="<?=$value->qte?>"><?=$value->qte?></option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
@@ -74,56 +107,38 @@ require_once  'views/header.php';
                     </td>
                     <td>
                       <div class="total-price price-box"> 
-                        <span class="price">$80.00</span> 
+                        <span class="price">$<?=$produit->getPrix()*$value->qte?></span>
                       </div>
                     </td>
                     <td>
                       <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
                     </td>
                   </tr>
+                            <?php
+                        }
+                    }else{
+
+                ?>
                   <tr>
-                    <td>
-                      <a href="product-page.php">
-                        <div class="product-image">
-                          <img alt="Stylexpo" src="images/2.jpg">
-                        </div>
-                      </a>
-                    </td>
-                    <td>
-                      <div class="product-title"> 
-                        <a href="product-page.php">Defyant Reversible Dot Shorts</a>
-                      </div>
-                    </td>
-                    <td>
-                      <ul>
-                        <li>
-                          <div class="base-price price-box"> 
-                            <span class="price">$80.00</span> 
+                      <td>
+                      </td>
+                      <td>
+                          <div class="product-title">
+                              <p>No product in cart</p>
                           </div>
-                        </li>
-                      </ul>
-                    </td>
-                    <td>
-                      <div class="input-box select-dropdown">
-                        <fieldset>
-                          <select data-id="100" class="quantity_cart option-drop" name="quantity_cart">
-                            <option selected="" value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                          </select>
-                        </fieldset>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="total-price price-box"> 
-                        <span class="price">$80.00</span> 
-                      </div>
-                    </td>
-                    <td>
-                      <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
-                    </td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
                   </tr>
+                  <?php
+                  }
+
+                  ?>
+
                 </tbody>
               </table>
             </div>

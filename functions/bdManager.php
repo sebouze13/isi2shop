@@ -3,6 +3,7 @@
 require_once "constantes.php";
 require_once "classes/produit.php";
 require_once "classes/favoris.php";
+require_once "classes/panier.php";
 
 if ( session_status() === PHP_SESSION_NONE ) {
     session_start();
@@ -97,6 +98,35 @@ function getProdById($id){
 
     mysqli_close($conn);
     return $retour;
+}
+
+function getPanier($idUser){
+    global $servername;
+    global $username;
+    global $password;
+    global $dbname;
+
+    $retour = array();
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $selectFavoris = "SELECT * FROM pannier WHERE id_user=$idUser";
+    $result = $conn->query($selectFavoris);
+
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $panier = new Panier($row["id_user"], $row["id_produit"], $row["qte"]);
+            array_push($retour, $panier);
+        }
+    }
+    return $retour;
+
+    $conn->close();
 }
 
 function addPanier($id_user, $id_produit, $qte){

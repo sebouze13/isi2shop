@@ -156,6 +156,26 @@ function addPanier($id_user, $id_produit, $qte){
     $conn->close();
 }
 
+function updatePanier($id_user, $id_produit, $qte){
+    global $servername;
+    global $username;
+    global $password;
+    global $dbname;
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $insertPanier = "UPDATE pannier SET qte=$qte WHERE id_user=$id_user AND id_produit=$id_produit";
+
+    mysqli_query($conn, $insertPanier);
+
+    $conn->close();
+}
+
 function deleteLignePanier($id_user, $id_produit){
     global $servername;
     global $username;

@@ -169,7 +169,12 @@ if(array_key_exists(OP_NAME, $_GET)){
                             <ul>
                                 <li class="wishlist-icon">
                                     <a href="wishlist.php">
-                                        <span></span>
+                                        <span>
+                                            <?php if(count($prodWish) !=0){
+                                                ?>
+                                            <small class="cart-notification"><?= count($prodWish) ?></small>
+                                            <?php } ?>
+                                        </span>
                                     </a>
                                     <div class="cart-dropdown header-link-dropdown">
                                         <ul class="cart-list link-dropdown-list">

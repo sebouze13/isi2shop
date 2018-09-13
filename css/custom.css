@@ -968,6 +968,22 @@ header#header {
 	width: 16px;
 }
 
+.header-right-link ul li.wishlist-icon > a span small.cart-notification {
+	background: #fc35ff;
+	color: #fff;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-o-border-radius: 50%;
+	height: 16px;
+	line-height: 15px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 5px;
+	width: 16px;
+}
+
 .side-toggle {
 	display: none;
 }

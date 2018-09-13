@@ -5,7 +5,7 @@ require_once  'functions/bdManager.php';
 require_once  'classes/produit.php';
 
 $prodWish = getAllFavoris();
-
+$qte=1;
 ?>
 
     <!-- Bread Crumb STRAT -->
@@ -36,6 +36,7 @@ $prodWish = getAllFavoris();
                                 <tr>
                                     <th>Product</th>
                                     <th>Descriotion</th>
+                                    <th>Quantity</th>
                                     <th>Price</th>
                                     <th>Stock Status</th>
                                     <th>Action</th>
@@ -75,10 +76,19 @@ $prodWish = getAllFavoris();
                                                     <a href="product-page.php"><?=$produit->libelle?></a>
                                                 </div>
                                             </td>
+
+                                            <td>
+                                                <div class="custom-qty">
+                                                    <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) result.value--;return false;" class="reduced items" type="button"> <i class="fa fa-minus"></i> </button>
+                                                    <input type="text" class="input-text qty" title="Qty" value="1" maxlength="8" id="qty" name="qty">
+                                                    <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items" type="button"> <i class="fa fa-plus"></i> </button>
+                                                </div>
+                                            </td>
+
                                             <td>
                                                 <ul>
                                                     <li>
-                                                        <div class="base-price price-box"><span class="price">$<?=$produit->prix?></span></div>
+                                                        <div class="base-price price-box"><span class="price">$<?= $produit->prix ?> </span></div>
                                                     </li>
                                                 </ul>
                                             </td>
@@ -94,11 +104,16 @@ $prodWish = getAllFavoris();
                                                 </div>
                                             </td>
                                             <td>
+                                                <a href="addPanier.php?qte=<?= $qte ?>&id=<?= $produit->id ?>">
+                                                <i title="Shopping Cart" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                </a>
                                                 <a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT , '&idProd=', $produit->id ?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
                                             </td>
                                         </tr>
                                         </tbody>
-                                        <?php
+                                </form>
+
+                                <?php
                                     }
                                 }else{
 
@@ -117,8 +132,8 @@ $prodWish = getAllFavoris();
                                         <td>
                                         </td>
                                         <td>
-                                        </td>
                                     </tr>
+                                    </td>
                                     </tbody>
                                     <?php
                                 }

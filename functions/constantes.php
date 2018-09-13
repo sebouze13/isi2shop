@@ -8,7 +8,6 @@ define("DBNAME", "isi2shop");
 define('OP_NAME', 'op');
 define('OP_AJOUT', 'add');
 define('OP_RETRAIT', 'del');
-define('OP_AJOUT_CART', 'addCart');
 define('OP_RETRAIT_CART', 'delCart');
 
 // Champs formulaires

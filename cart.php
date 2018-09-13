@@ -88,7 +88,7 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
                       <ul>
                         <li>
                           <div class="base-price price-box"> 
-                            <span class="price">$<?=$produit->getPrix()?></span>
+                            <span class="price">$<?=$produit->prix?></span>
                           </div>
                         </li>
                       </ul>
@@ -107,11 +107,11 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
                     </td>
                     <td>
                       <div class="total-price price-box"> 
-                        <span class="price">$<?=$produit->getPrix()*$value->qte?></span>
+                        <span class="price">$<?=$produit->prix*$value->qte?></span>
                       </div>
                     </td>
                     <td>
-                      <i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i>
+                      <a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT_CART , '&idProd=', $produit->id ?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
                     </td>
                   </tr>
                             <?php
@@ -222,7 +222,7 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
                       <td>Item(s) Subtotal</td>
                       <td>
                         <div class="price-box"> 
-                          <span class="price">$160.00</span> 
+                          <span class="price">$<?=$total?></span>
                         </div>
                       </td>
                     </tr>
@@ -238,7 +238,7 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
                       <td><b>Amount Payable</b></td>
                       <td>
                         <div class="price-box"> 
-                          <span class="price"><b>$160.00</b></span> 
+                          <span class="price"><b>$<?=$total?></b></span>
                         </div>
                       </td>
                     </tr>

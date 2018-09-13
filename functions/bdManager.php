@@ -15,6 +15,8 @@ $password = PASSWORDBD;
 $dbname = DBNAME;
 
 
+
+// Login / Register
 function login($login, $pwd){
     $retour = false;
     global $servername;
@@ -44,6 +46,8 @@ function login($login, $pwd){
     return $retour;
 }
 
+
+// PRODUITS
 
 function getAllProduct(){
     global $servername;
@@ -100,6 +104,9 @@ function getProdById($id){
     return $retour;
 }
 
+
+// PANIER
+
 function getPanier($idUser){
     global $servername;
     global $username;
@@ -142,12 +149,40 @@ function addPanier($id_user, $id_produit, $qte){
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $insertFavoris = "INSERT INTO pannier (id_user, id_produit, qte) VALUES ( $id_user , $id_produit, $qte)";
+    $insertPanier = "INSERT INTO pannier (id_user, id_produit, qte) VALUES ( $id_user , $id_produit, $qte)";
 
-    mysqli_query($conn, $insertFavoris);
+    mysqli_query($conn, $insertPanier);
 
     $conn->close();
 }
+
+function deleteLignePanier($id_user, $id_produit){
+    global $servername;
+    global $username;
+    global $password;
+    global $dbname;
+
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // sql to delete a record
+    $deletePanier = "DELETE FROM pannier WHERE id_user=$id_user and id_produit = $id_produit";
+
+    if ($conn->query($deletePanier) === TRUE) {
+    } else {
+        echo "Error deleting record: " . $conn->error;
+    }
+
+    $conn->close();
+}
+
+
+// FAVORIS
 
 function addFavoris($id_user, $id_produit){
     global $servername;

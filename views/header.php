@@ -28,7 +28,7 @@ $prodWish = getAllFavoris();
 $nb = count($prodWish);
 
 $panier = getPanier($_SESSION[IDUSER]);
-$nb2 = count($panier);
+$total = 0;
 
 if(array_key_exists(OP_NAME, $_GET)){
     if ($_GET[OP_NAME] == OP_RETRAIT){
@@ -36,6 +36,9 @@ if(array_key_exists(OP_NAME, $_GET)){
         header('Location:'.$_SERVER['PHP_SELF'].'?idProd='.$_GET['idProd']);
     }elseif ($_GET[OP_NAME] == OP_AJOUT){
         addFavoris($_SESSION[IDUSER], $_GET['idProd']);
+        header('Location:'.$_SERVER['PHP_SELF'].'?idProd='.$_GET['idProd']);
+    }elseif ($_GET[OP_NAME] == OP_RETRAIT_CART){
+        deleteLignePanier($_SESSION[IDUSER], $_GET['idProd']);
         header('Location:'.$_SERVER['PHP_SELF'].'?idProd='.$_GET['idProd']);
     }
 }
@@ -232,7 +235,12 @@ if(array_key_exists(OP_NAME, $_GET)){
                                         <div class="mt-20"> <a href="shop.php" class="btn-color btn">Shop</a> <a href="wishlist.php" class="btn-color btn right-side">My wishlist</a> </div>
                                     </div>
                                 </li>
-                                <li class="cart-icon"> <a href="#"> <span> <small class="cart-notification">2</small> </span> </a>
+                                <li class="cart-icon"> <a href="#"> <span>
+                                        <?php if(count($panier) !=0){
+                                            ?>
+                                            <small class="cart-notification"><?= count($panier) ?></small>
+                                        <?php } ?>
+                                        </span> </a>
                                     <div class="cart-dropdown header-link-dropdown">
                                         <ul class="cart-list link-dropdown-list">
                                             <?php if(count($panier) > 0 ){
@@ -256,10 +264,10 @@ if(array_key_exists(OP_NAME, $_GET)){
                                                     break;
                                             }
                                             ?>
-                                            <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
+                                            <li> <a class="close-cart" href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT_CART , '&idProd=', $produit->id ?>"><i class="fa fa-times-circle"></i></a>
                                                 <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/<?=$dossierImage."/".$produit->img?>"></a>
                                                     <div class="media-body"> <span><a href="#"><?=$produit->libelle?></a></span>
-                                                        <p class="cart-price">$<?=$produit->prix?></p>
+                                                        <p class="cart-price">$<?=$produit->prix*$value->qte?></p>
                                                         <div class="product-qty">
                                                             <label>Qty:</label>
                                                             <div class="custom-qty">
@@ -270,6 +278,7 @@ if(array_key_exists(OP_NAME, $_GET)){
                                                 </div>
                                             </li>
                                             <?php
+                                                $total += $produit->prix*$value->qte;
                                                     }
                                                 }else{
                                             ?>
@@ -278,7 +287,7 @@ if(array_key_exists(OP_NAME, $_GET)){
                                                 }
                                             ?>
                                         </ul>
-                                        <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
+                                        <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$<?=$total?></strong></span> </p>
                                         <div class="clearfix"></div>
                                         <div class="mt-20"> <a href="cart.php" class="btn-color btn">Cart</a> <a href="checkout.php" class="btn-color btn right-side">Checkout</a> </div>
                                     </div>

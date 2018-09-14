@@ -6,6 +6,8 @@ if ( session_status() === PHP_SESSION_NONE ) {
     session_start();
 }
 
+$connexionDeconnexion = "";
+
 if ( array_key_exists(IDUSER, $_SESSION)) {
     $connexionDeconnexion = '<a href="functions/logout.php" title="Logout">Logout</a>
                                 <div class="content-dropdown">
@@ -26,8 +28,12 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
 
 $prodWish = getAllFavoris();
 $nb = count($prodWish);
+$panier = null;
 
-$panier = getPanier($_SESSION[IDUSER]);
+if(array_key_exists(IDUSER, $_SESSION)){
+    $panier = getPanier($_SESSION[IDUSER]);
+}
+
 $total = 0;
 
 if(array_key_exists(OP_NAME, $_GET)){
@@ -383,9 +389,6 @@ if(array_key_exists(OP_NAME, $_GET)){
                     <li class="cart-icon">
                         <a class="popup-with-form" href="#cart_popup"><span class="icon"></span><span class="icon-text">Cart</span></a>
                     </li>
-                    <li class="account">
-                        <a class="popup-with-form" href="#account_popup"><span class="icon"></span><span class="icon-text">Account</span></a>
-                    </li>
                     <li class="search">
                         <a class="popup-with-form" href="#search_popup"><span class="icon"></span><span class="icon-text">Search</span></a>
                     </li>
@@ -401,103 +404,21 @@ if(array_key_exists(OP_NAME, $_GET)){
                     </div>
                     <div class="popup-detail">
                         <ul class="cate-inner">
-                            <li class="level sub-megamenu">
-                                <span class="opener plus"></span>
-                                <a href="shop.php" class="page-scroll"><i class="fa fa-female"></i>Fashion (10)</a>
-                                <div class="megamenu  mega-sub-menu">
-                                    <div class="megamenu-inner-top">
-                                        <ul class="sub-menu-level1">
-                                            <li class="level2">
-                                                <ul class="sub-menu-level2 ">
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Blazer & Coat</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Sport Shoes</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Trousers</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Purse</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Wallets</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Skirts</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Tops</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Sleepwear</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Jeans</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                            <li class="level">
+                                <a href="shop.php" class="page-scroll"><i class="fa fa-camera-retro"></i>All</a>
                             </li>
                             <li class="level">
-                                <a href="shop.php" class="page-scroll"><i class="fa fa-camera-retro"></i>Cameras (70)</a>
+                                <a href="shop.php?categ=<?=MEN?>" class="page-scroll"><i class="fa fa-camera-retro"></i>Men</a>
                             </li>
                             <li class="level">
-                                <a href="shop.php" class="page-scroll"><i class="fa fa-desktop"></i>computers (10)</a>
-                            </li>
-                            <li class="level sub-megamenu">
-                                <span class="opener plus"></span>
-                                <a href="shop.php" class="page-scroll"><i class="fa fa-clock-o"></i>Wathches (15)</a>
-                                <div class="megamenu mega-sub-menu">
-                                    <div class="megamenu-inner-top">
-                                        <ul class="sub-menu-level1">
-                                            <li class="level2">
-                                                <ul class="sub-menu-level2">
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Dresses</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Sport Jeans</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Skirts</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Tops</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Sleepwear</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Jeans</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Blazer & Coat</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Sport Shoes</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Phone Cases</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Trousers</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Purse</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Wallets</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <a href="shop.php?categ=<?=WOMEN?>" class="page-scroll"><i class="fa fa-camera-retro"></i>Women</a>
                             </li>
                             <li class="level">
-                                <a href="shop.php" class="page-scroll"><i class="fa fa-shopping-bag"></i>Bags (18)</a>
-                            </li>
-                            <li class="level sub-megamenu ">
-                                <span class="opener plus"></span>
-                                <a href="shop.php" class="page-scroll"><i class="fa fa-tablet"></i>Smartphones (20)</a>
-                                <div class="megamenu mega-sub-menu">
-                                    <div class="megamenu-inner-top">
-                                        <ul class="sub-menu-level1">
-                                            <li class="level2">
-                                                <ul class="sub-menu-level2">
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Dresses</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Sport Jeans</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Skirts</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Tops</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Sleepwear</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Jeans</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="level2">
-                                                <ul class="sub-menu-level2 ">
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Blazer & Coat</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Sport Shoes</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Phone Cases</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Trousers</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Purse</a></li>
-                                                    <li class="level3"><a href="shop.php"><span>■</span>Wallets</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <a href="shop.php?categ=<?=KID?>" class="page-scroll"><i class="fa fa-camera-retro"></i>Kid</a>
                             </li>
                             <li class="level">
-                                <a href="shop.php" class="page-scroll"><i class="fa fa-heart"></i>Software</a>
+                                <a href="shop.php?categ=<?=ELECTRO?>" class="page-scroll"><i class="fa fa-camera-retro"></i>Electro</a>
                             </li>
-                            <li class="level "><a href="shop.php" class="page-scroll"><i class="fa fa-headphones"></i>Headphone (12)</a></li>
-                            <li class="level">
-                                <a href="shop.php" class="page-scroll"><i class="fa fa-microphone"></i>Accessories (70)</a>
-                            </li>
-                            <li class="level"><a href="shop.php" class="page-scroll"><i class="fa fa-bolt"></i>Printers & Ink</a></li>
-                            <li class="level"><a href="shop.php" class="page-scroll"><i class="fa fa-plus-square"></i>More Categories</a></li>
                         </ul>
                     </div>
                 </div>
@@ -508,93 +429,51 @@ if(array_key_exists(OP_NAME, $_GET)){
                     <div class="popup-detail">
                         <div class="cart-dropdown ">
                             <ul class="cart-list link-dropdown-list">
-                                <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                                    <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/1.jpg"></a>
-                                        <div class="media-body"> <span><a href="#">Black African Print Skirt</a></span>
-                                            <p class="cart-price">$14.99</p>
+                                <?php
+                                if(count($panier) > 0 ){
+                                $i = 0;
+                                foreach ($panier as $value) {
+                                $idProd = $value->idProd;
+                                $produit = getProdById($idProd);
+                                switch($produit->id_cat){
+                                    case 1:
+                                        $dossierImage = MEN;
+                                        break;
+                                    case 2:
+                                        $dossierImage = WOMEN;
+                                        break;
+                                    case 3:
+                                        $dossierImage = KID;
+                                        break;
+                                    case 4:
+                                        $dossierImage = ELECTRO;
+                                        break;
+                                    default:
+                                        break;
+                                }
+
+                                ?>
+                                <li> <a class="close-cart" href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT_CART , '&idProd=', $produit->id ?>"><i class="fa fa-times-circle"></i></a>
+                                    <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/<?=$dossierImage."/".$produit->getImg()?>"></a>
+                                        <div class="media-body"> <span><a href="product-page.php?idProd=<?=$produit->id?>"><?=$produit->getLibelle()?></a></span>
+                                            <p class="cart-price">$<?=$produit->prix?></p>
                                             <div class="product-qty">
                                                 <label>Qty:</label>
                                                 <div class="custom-qty">
-                                                    <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
+                                                    <label><?=$value->qte?></label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
-                                <li> <a class="close-cart"><i class="fa fa-times-circle"></i></a>
-                                    <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/2.jpg"></a>
-                                        <div class="media-body"> <span><a href="#">Black African Print Skirt</a></span>
-                                            <p class="cart-price">$14.99</p>
-                                            <div class="product-qty">
-                                                <label>Qty:</label>
-                                                <div class="custom-qty">
-                                                    <input type="text" name="qty" maxlength="8" value="1" title="Qty" class="input-text qty">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                    <?php
+                                }
+                                }
+                                ?>
                             </ul>
-                            <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$29.98</strong></span> </p>
+                            <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$<?=$total?></strong></span> </p>
                             <div class="clearfix"></div>
                             <div class="mt-20"> <a href="cart.php" class="btn-color btn">Cart</a> <a href="checkout.php" class="btn-color btn right-side">Checkout</a> </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="account_popup" class="white-popup-block mfp-hide popup-position">
-                    <div class="popup-title">
-                        <h2 class="main_title heading"><span>Account</span></h2>
-                    </div>
-                    <div class="popup-detail">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <a href="account.php">
-                                    <div class="account-inner mb-30">
-                                        <i class="fa fa-user"></i><br/>
-                                        <span>Account</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a href="register.php">
-                                    <div class="account-inner mb-30">
-                                        <i class="fa fa-user-plus"></i><br/>
-                                        <span>Register</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a href="cart.php">
-                                    <div class="account-inner mb-30">
-                                        <i class="fa fa-shopping-bag"></i><br/>
-                                        <span>Shopping</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a href="account.php#step4">
-                                    <div class="account-inner">
-                                        <i class="fa fa-key"></i><br/>
-                                        <span>Change Pass</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a href="account.php#step3">
-                                    <div class="account-inner">
-                                        <i class="fa fa-history"></i><br/>
-                                        <span>history</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4">
-                                <a href="login.php">
-                                    <div class="account-inner">
-                                        <i class="fa fa-share-square-o"></i><br/>
-                                        <span>log out</span>
-                                    </div>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>

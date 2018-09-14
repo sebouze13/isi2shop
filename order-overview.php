@@ -1,6 +1,12 @@
 <?php
 $page_name = "Order overview";
 require_once  'views/header.php';
+
+$panier = null;
+
+if(array_key_exists(IDUSER, $_SESSION)){
+    $panier = getPanier($_SESSION[IDUSER]);
+}
 ?>
   
   <!-- Bread Crumb STRAT -->
@@ -93,46 +99,56 @@ require_once  'views/header.php';
                         </tr>
                       </thead>
                       <tbody>
+                        <?php
+                        if(count($panier) > 0 ){
+                            $i = 0;
+                            foreach ($panier as $value) {
+                                $idProd = $value->idProd;
+                                $produit = getProdById($idProd);
+                                switch($produit->id_cat){
+                                    case 1:
+                                        $dossierImage = MEN;
+                                        break;
+                                    case 2:
+                                        $dossierImage = WOMEN;
+                                        break;
+                                    case 3:
+                                        $dossierImage = KID;
+                                        break;
+                                    case 4:
+                                        $dossierImage = ELECTRO;
+                                        break;
+                                    default:
+                                        break;
+                                }
+
+                                ?>
                         <tr>
                           <td><a href="product-page.php">
-                            <div class="product-image"><img alt="Honour" src="images/1.jpg"></div>
+                            <div class="product-image"><img alt="Honour" src="images/<?=$dossierImage."/".$produit->getImg()?>"></div>
                             </a></td>
-                          <td><div class="product-title"> <a href="product-page.php">Cross Colours Camo Print Tank half mengo</a>
+                          <td><div class="product-title"> <a href="product-page.php"><?=$produit->getLibelle()?></a>
                               <div class="product-info-stock-sku m-0">
                                 <div>
-                                  <label>Price: </label>
-                                  <div class="price-box"> <span class="info-deta price">$80.00</span> </div>
+                                  <label>Total price: </label>
+                                  <div class="price-box"> <span class="info-deta price">$<?=$produit->prix?></span> </div>
                                 </div>
                               </div>
                               <div class="product-info-stock-sku m-0">
                                 <div>
                                   <label>Quantity: </label>
-                                  <span class="info-deta">1</span> </div>
+                                  <span class="info-deta"><?=$value->qte?></span> </div>
                               </div>
                             </div></td>
-                          <td><div data-id="100" class="total-price price-box"> <span class="price">$80.00</span> </div></td>
-                          <td><i class="fa fa-trash cart-remove-item" data-id="100" title="Remove Item From Cart"></i></td>
+                          <td><div data-id="100" class="total-price price-box"> <span class="price">$<?=$produit->prix*$value->qte?></span> </div></td>
+                          <td>
+                              <a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT_CART , '&idProd=', $produit->id ?>"><i class="fa fa-trash cart-remove-item" data-id="100" title="Remove Item From Cart"></i></a>
+                          </td>
                         </tr>
-                        <tr>
-                          <td><a href="product-page.php">
-                            <div class="product-image"><img alt="Honour" src="images/2.jpg"></div>
-                            </a></td>
-                          <td><div class="product-title"> <a href="product-page.php">Cross Colours Camo Print Tank half mengo</a>
-                              <div class="product-info-stock-sku m-0">
-                                <div>
-                                  <label>Price: </label>
-                                  <div class="price-box"> <span class="info-deta price">$80.00</span> </div>
-                                </div>
-                              </div>
-                              <div class="product-info-stock-sku m-0">
-                                <div>
-                                  <label>Quantity: </label>
-                                  <span class="info-deta">1</span> </div>
-                              </div>
-                            </div></td>
-                          <td><div data-id="100" class="total-price price-box"> <span class="price">$80.00</span> </div></td>
-                          <td><i class="fa fa-trash cart-remove-item" data-id="100" title="Remove Item From Cart"></i></td>
-                        </tr>
+                                <?php
+                            }
+                        }
+                        ?>
                       </tbody>
                     </table>
                   </div>
@@ -148,7 +164,7 @@ require_once  'views/header.php';
                       <tbody>
                         <tr>
                           <td>Item(s) Subtotal</td>
-                          <td><div class="price-box"> <span class="price">$160.00</span> </div></td>
+                          <td><div class="price-box"> <span class="price">$<?=$total?></span> </div></td>
                         </tr>
                         <tr>
                           <td>Shipping</td>
@@ -156,7 +172,7 @@ require_once  'views/header.php';
                         </tr>
                         <tr>
                           <td><b>Amount Payable</b></td>
-                          <td><div class="price-box"> <span class="price"><b>$160.00</b></span> </div></td>
+                          <td><div class="price-box"> <span class="price"><b>$<?=$total?></b></span> </div></td>
                         </tr>
                       </tbody>
                     </table>

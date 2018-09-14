@@ -520,7 +520,7 @@
                             <li class="level3"><a href="compare.php"><span>■</span>Compare</a></li>
                             <li class="level3"><a href="wishlist.php"><span>■</span>Wishlist</a></li>
                             <li class="level3"><a href="contact.php"><span>■</span>Contact</a></li>
-                            <li class="level3"><a href="404.php"><span>■</span>404 Error</a></li>
+                            <li class="level3"><a href="404.html"><span>■</span>404 Error</a></li>
                             <li class="level3"><a href="blog.html"><span>■</span>Blog</a></li>
                             <li class="level3"><a href="single-blog.html"><span>■</span>Single Blog</a></li>
                           </ul>

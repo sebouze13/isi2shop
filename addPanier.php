@@ -14,7 +14,22 @@ $existe = false;
 
 if(array_key_exists('id', $_GET)){
     if($_GET['qte'] == 0){
-        $qte = "qty";
+
+        $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $string_parse = parse_url($url, PHP_URL_QUERY);
+
+        function get_string_between($string, $start, $end){
+            $string = ' ' . $string;
+            $ini = strpos($string, $start);
+            if ($ini == 0) return '';
+            $ini += strlen($start);
+            $len = strpos($string, $end, $ini) - $ini;
+            return substr($string, $ini, $len);
+        }
+
+        $qty = get_string_between($string_parse, 'qty', '=');
+
+        $qte = 'qty' . $qty;
 
     } else {
         $qte = "qte";

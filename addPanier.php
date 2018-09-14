@@ -44,10 +44,9 @@ if(array_key_exists('id', $_GET)){
         updatePanier($_SESSION[IDUSER], $_GET['id'], $_GET[$qte]);
     } else{
         addPanier($_SESSION[IDUSER], $_GET['id'], $_GET[$qte]);
-        if(array_key_exists('btn', $_GET)){
+        if(array_key_exists('addToCart-btn', $_GET)){
             deleteFavoris($_SESSION[IDUSER], $_GET['id']);
         }
-
     }
 } else {
     header("Location:shop.php");

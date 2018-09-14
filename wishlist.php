@@ -99,7 +99,6 @@ $qte=1;
                                                 </td>
                                                 <td>
                                                     <div class="total-price price-box">
-                                                        <input type="hidden" name="btn" value="0">
                                                         <span class="price">
                                                             <?php if($produit->qte_dispo > 0){
                                                                 echo 'In Stock';
@@ -110,8 +109,8 @@ $qte=1;
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <button name="addToCart-btn-<?=$i?>">
-                                                    <i title="Shopping Cart" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                    <button name="addToCart-btn">
+                                                        <i title="Shopping Cart" class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                     </button>
                                                     <a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT , '&idProd=', $produit->id ?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
                                                 </td>

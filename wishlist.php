@@ -99,6 +99,7 @@ $qte=1;
                                                 </td>
                                                 <td>
                                                     <div class="total-price price-box">
+                                                        <input type="hidden" name="btn" value="0">
                                                         <span class="price">
                                                             <?php if($produit->qte_dispo > 0){
                                                                 echo 'In Stock';

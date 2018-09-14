@@ -3,9 +3,9 @@ $page_name = "My wishlist";
 require_once  'views/header.php';
 require_once  'functions/bdManager.php';
 require_once  'classes/produit.php';
-
+$i=1;
 $prodWish = getAllFavoris();
-
+$qte=1;
 ?>
 
     <!-- Bread Crumb STRAT -->
@@ -36,6 +36,7 @@ $prodWish = getAllFavoris();
                                 <tr>
                                     <th>Product</th>
                                     <th>Descriotion</th>
+                                    <th>Quantity</th>
                                     <th>Price</th>
                                     <th>Stock Status</th>
                                     <th>Action</th>
@@ -46,6 +47,7 @@ $prodWish = getAllFavoris();
                                     foreach ($prodWish as $value) {
                                         $prod = $value->id_produit;
                                         $produit = getProdById($prod);
+                                        $i;
                                         switch($produit->id_cat){
                                             case 1:
                                                 $dossierImage = MEN;
@@ -64,26 +66,39 @@ $prodWish = getAllFavoris();
                                         }
                                         ?>
                                         <tbody>
-                                        <tr>
-                                            <td>
-                                                <a href="product-page.php?idProd=<?=$produit->id?>">
-                                                    <div class="product-image"><img alt="Stylexpo" src="images/<?=$dossierImage . '/' . $produit->img?>"></div>
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <div class="product-title">
-                                                    <a href="product-page.php"><?=$produit->libelle?></a>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <ul>
-                                                    <li>
-                                                        <div class="base-price price-box"><span class="price">$<?=$produit->prix?></span></div>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                <div class="total-price price-box">
+                                        <form action="addPanier.php" method="get">
+                                            <tr>
+                                                <td>
+                                                    <a href="product-page.php?idProd=<?=$produit->id?>">
+                                                        <div class="product-image"><img alt="Stylexpo" src="images/<?=$dossierImage . '/' . $produit->img?>"></div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <div class="product-title">
+                                                        <a href="product-page.php"><?=$produit->libelle?></a>
+                                                    </div>
+                                                </td>
+                                                <input type="hidden" name="id" value="<?=$produit->getId()?>">
+                                                <input type="hidden" name="qte" value="0">
+                                                <td>
+                                                    <div class="custom-qty">
+                                                        <button onclick="var result = document.getElementById('qty<?=$i?>'); var qty<?= $i?> = result.value; if( !isNaN( qty<?=$i?> ) &amp;&amp; qty<?=$i?> &gt; 1 ) result.value--;return false;" class="reduced items" type="button">
+                                                            <i class="fa fa-minus"></i>
+                                                        </button>
+                                                        <input type="text" class="input-text qty" title="Qty" value="1" maxlength="8" id="qty<?=$i?>" name="qty<?=$i?>">
+                                                        <button onclick="var result = document.getElementById('qty<?=$i?>'); var qty<?=$i?> = result.value; if( !isNaN( qty<?=$i?> )) result.value++;return false;" class="increase items" type="button"> <i class="fa fa-plus"></i> </button>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="base-price price-box"><span class="price">$<?= $produit->prix ?> </span></div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                                <td>
+                                                    <div class="total-price price-box">
                                                         <span class="price">
                                                             <?php if($produit->qte_dispo > 0){
                                                                 echo 'In Stock';
@@ -91,15 +106,21 @@ $prodWish = getAllFavoris();
                                                                 echo'Out of Stock';
                                                             }?>
                                                         </span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT , '&idProd=', $produit->id ?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
-                                            </td>
-                                        </tr>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button>
+                                                        <i title="Shopping Cart" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                    </button>
+                                                    <a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT , '&idProd=', $produit->id ?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>
+                                                </td>
+                                            </tr>
+                                        </form>
                                         </tbody>
+
+
                                         <?php
-                                    }
+                                        $i++;  }
                                 }else{
 
                                     ?>
@@ -117,8 +138,8 @@ $prodWish = getAllFavoris();
                                         <td>
                                         </td>
                                         <td>
-                                        </td>
                                     </tr>
+                                    </td>
                                     </tbody>
                                     <?php
                                 }

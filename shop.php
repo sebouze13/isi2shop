@@ -66,100 +66,6 @@ switch ($categorie){
                             </ul>
                         </div>
                     </div>
-                    <div class="sidebar-box mb-40"> <span class="opener plus"></span>
-                        <div class="sidebar-title">
-                            <h3><span>Shop by</span></h3>
-                        </div>
-                        <div class="sidebar-contant">
-                            <div class="price-range mb-30">
-                                <div class="inner-title">Price range</div>
-                                <input class="price-txt" type="text" id="amount">
-                                <div id="slider-range"></div>
-                            </div>
-                            <div class="size mb-20">
-                                <div class="inner-title">Size</div>
-                                <ul >
-                                    <li><a href="#">S (10)</a></li>
-                                    <li><a href="#">M (05)</a></li>
-                                    <li><a href="#">L (10)</a></li>
-                                    <li><a href="#">XL (08)</a></li>
-                                    <li><a href="#">XXL (05)</a></li>
-                                </ul>
-                            </div>
-                            <div class="mb-20">
-                                <div class="inner-title">Color</div>
-                                <ul>
-                                    <li><a href="#">Black <span>(0)</span></a></li>
-                                    <li><a href="#">Blue <span>(05)</span></a></li>
-                                    <li><a href="#">Brown <span>(10)</span></a></li>
-                                </ul>
-                            </div>
-                            <div class="mb-20">
-                                <div class="inner-title">Manufacture</div>
-                                <ul>
-                                    <li><a href="#">Augue congue <span>(0)</span></a></li>
-                                    <li><a href="#">Eu magna <span>(05)</span></a></li>
-                                    <li><a href="#">Ipsum sit <span>(10)</span></a></li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn btn-color">Refine</a> </div>
-                    </div>
-                    <div class="sidebar-box mb-40 d-none d-lg-block">
-                        <a href="#">
-                            <img src="images/left-banner.jpg" alt="Stylexpo">
-                        </a>
-                    </div>
-                    <div class="sidebar-box sidebar-item"> <span class="opener plus"></span>
-                        <div class="sidebar-title">
-                            <h3><span>Best Selle</span>r</h3>
-                        </div>
-                        <div class="sidebar-contant">
-                            <ul>
-                                <li>
-                                    <div class="pro-media"> <a href="#"><img alt="T-shirt" src="images/1.jpg"></a> </div>
-                                    <div class="pro-detail-info"> <a href="#">Black African Print</a>
-                                        <div class="rating-summary-block">
-                                            <div class="rating-result" title="53%"> <span style="width:53%"></span> </div>
-                                        </div>
-                                        <div class="price-box"> <span class="price">$80.00</span> </div>
-                                        <div class="cart-link">
-                                            <form>
-                                                <button title="Add to Cart">Add To Cart</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="pro-media"> <a href="#"><img alt="T-shirt" src="images/1.jpg"></a> </div>
-                                    <div class="pro-detail-info"> <a href="#">Black African Print</a>
-                                        <div class="rating-summary-block">
-                                            <div class="rating-result" title="53%"> <span style="width:53%"></span> </div>
-                                        </div>
-                                        <div class="price-box"> <span class="price">$80.00</span> </div>
-                                        <div class="cart-link">
-                                            <form>
-                                                <button title="Add to Cart">Add To Cart</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="pro-media"> <a href="#"><img alt="T-shirt" src="images/1.jpg"></a> </div>
-                                    <div class="pro-detail-info"> <a href="#">Black African Print</a>
-                                        <div class="rating-summary-block">
-                                            <div class="rating-result" title="53%"> <span style="width:53%"></span> </div>
-                                        </div>
-                                        <div class="price-box"> <span class="price">$80.00</span> </div>
-                                        <div class="cart-link">
-                                            <form>
-                                                <button title="Add to Cart">Add To Cart</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-lg-9">
@@ -177,20 +83,6 @@ switch ($categorie){
                                         <div class="list-icon list-types-icon"></div>
                                     </a>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="show-item right-side float-left-sm"> <span>Show :</span>
-                                <div class="select-item select-dropdown">
-                                    <fieldset>
-                                        <select  name="speed" id="show-item" class="option-drop">
-                                            <option value="" selected="selected">24</option>
-                                            <option value="">12</option>
-                                            <option value="">6</option>
-                                        </select>
-                                    </fieldset>
-                                </div>
-                                <span>Per Page</span>
                             </div>
                         </div>
                     </div>

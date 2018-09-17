@@ -1,6 +1,10 @@
 <?php
 $page_name = "Checkout";
 require_once  'views/header.php';
+
+if ( !array_key_exists(IDUSER, $_SESSION)) {
+    header("Location:login.php");
+}
 ?>
 
   <!-- Bread Crumb STRAT -->

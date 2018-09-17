@@ -63,7 +63,7 @@ switch($produit->getIdCat()){
                                 <div class="product-detail-main">
                                     <div class="product-item-details">
                                         <h1 class="product-item-name"><?=$produit->getLibelle()?></h1>
-                                        <form class="price-box"> <span class="price"><?=$produit->getPrix()?></span>
+                                        <form class="price-box"> <span class="price">$<?=$produit->getPrix()?></span>
                                             <div class="product-info-stock-sku">
                                                 <div>
                                                     <label>Availability: </label>

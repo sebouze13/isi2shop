@@ -1,6 +1,7 @@
 <?php
 require_once "functions/constantes.php";
 require_once "functions/bdManager.php";
+require_once "functions/panierInvite.php";
 
 if ( session_status() === PHP_SESSION_NONE ) {
     session_start();
@@ -9,6 +10,7 @@ if ( session_status() === PHP_SESSION_NONE ) {
 $connexionDeconnexion = "";
 
 if ( array_key_exists(IDUSER, $_SESSION)) {
+    $chekout = "checkout.php";
     $connexionDeconnexion = '<a href="functions/logout.php" title="Logout">Logout</a>
                                 <div class="content-dropdown">
                                     <ul>
@@ -16,6 +18,7 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
                                     </ul>
                                 </div>';
 } else {
+    $chekout = "login.php";
     $connexionDeconnexion = "<a href=\"login.php\" title=\"Login\">Login</a> or
                                 <a href=\"register.php\" title=\"Register\">Register</a>
                                 <div class=\"content-dropdown\">
@@ -28,11 +31,12 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
 
 $prodWish = getAllFavoris();
 $nb = count($prodWish);
-$panier = null;
 
 if(array_key_exists(IDUSER, $_SESSION)){
     $panier = getPanier($_SESSION[IDUSER]);
     $listFav = getWishlist($_SESSION[IDUSER]);
+} else {
+    $panier = getPanierInvite();
 }
 
 $total = 0;
@@ -306,7 +310,7 @@ if(array_key_exists(OP_NAME, $_GET)){
                                         </ul>
                                         <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$<?=$total?></strong></span> </p>
                                         <div class="clearfix"></div>
-                                        <div class="mt-20"> <a href="cart.php" class="btn-color btn">Cart</a> <a href="checkout.php" class="btn-color btn right-side">Checkout</a> </div>
+                                        <div class="mt-20"> <a href="cart.php" class="btn-color btn">Cart</a> <a href="<?=$chekout?>" class="btn-color btn right-side">Checkout</a> </div>
                                     </div>
                                 </li>
                                 <li class="side-toggle">

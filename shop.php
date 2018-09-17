@@ -369,8 +369,6 @@ switch ($categorie){
 </section>
 <!-- News Letter End -->
 
-<!-- FOOTER START -->
 <?php
 require_once  'views/footer.php';
 ?>
-<!-- FOOTER END -->

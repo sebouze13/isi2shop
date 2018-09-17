@@ -46,6 +46,29 @@ function login($login, $pwd){
     return $retour;
 }
 
+function addUser($l_name, $f_name, $login, $pwd){
+    global $servername;
+    global $username;
+    global $password;
+    global $dbname;
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $newUser = "INSERT INTO user (nom, prenom, login, pwd) VALUES ('$l_name', '$f_name', '$login', '$pwd')";
+
+    if (mysqli_query($conn, $newUser)) {
+        return true;
+    } else {
+        return false;
+    }
+
+    $conn->close();
+}
 
 // PRODUITS
 

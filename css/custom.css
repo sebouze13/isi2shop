@@ -4139,6 +4139,11 @@ table.table {
 /* Checkout Page CSS Start */
 
 /* Login Register Page CSS Start */
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+
 .new-account .link {
 	text-decoration: underline;
 	color: #222;

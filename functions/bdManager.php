@@ -70,6 +70,37 @@ function addUser($l_name, $f_name, $login, $pwd){
     $conn->close();
 }
 
+function getUserByLogin($login){
+    global $servername;
+    global $username;
+    global $password;
+    global $dbname;
+
+    $retour = null;
+
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: ". mysqli_connect_error());
+    }
+
+    $getUser = "SELECT * FROM user WHERE login='$login'";
+    $result = mysqli_query($conn, $getUser);
+    if (mysqli_num_rows($result) > 0) {
+        if($row = mysqli_fetch_assoc($result)) {
+            $retour = true;
+        }
+    }
+
+    mysqli_close($conn);
+    return $retour;
+
+
+
+    mysqli_close($conn);
+}
+
 // PRODUITS
 
 function getAllProduct(){

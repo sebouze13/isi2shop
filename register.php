@@ -58,10 +58,22 @@ if(isset($_POST['submit'])){
     }
 
     if($check1 && $check2 && $check3 && $check4 && $check5 && $check6){
-        $test = addUser($_POST["l-name"], $_POST["f-name"], $_POST["login-email"], $_POST["login-pass"]);
-        //login($check_login_email, $check_login_pass);
-        $_SESSION['SBUser'] = $test;
-        login($_POST["login-email"],$_POST["login-pass"]);
+        if(getUserByLogin($check_login_email) == false){
+            $test = addUser($_POST["l-name"], $_POST["f-name"], $_POST["login-email"], $_POST["login-pass"]);
+            //login($check_login_email, $check_login_pass);
+            $_SESSION['SBUser'] = $test;
+            login($_POST["login-email"],$_POST["login-pass"]);
+            echo "<script type=\"text/javascript\">
+                                alert(\"Thank you for joining us!\");
+                                window.location = 'index.php';
+                            </script>";
+        }else{
+            echo "<script type=\"text/javascript\">
+                                alert(\"User alredy registered, please login\");
+                                window.location = 'login.php';
+                            </script>";
+
+        }
     }
 }
 

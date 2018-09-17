@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 12 sep. 2018 à 18:26
+-- Généré le :  lun. 17 sep. 2018 à 13:06
 -- Version du serveur :  5.7.22-log
 -- Version de PHP :  5.6.35
 
@@ -56,6 +56,13 @@ CREATE TABLE IF NOT EXISTS `favoris` (
   `id_produit` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `favoris`
+--
+
+INSERT INTO `favoris` (`id_user`, `id_produit`) VALUES
+(1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -66,8 +73,19 @@ DROP TABLE IF EXISTS `pannier`;
 CREATE TABLE IF NOT EXISTS `pannier` (
   `id_user` int(11) NOT NULL,
   `id_produit` int(11) NOT NULL,
-  `qte` int(11) NOT NULL
+  `qte` int(11) NOT NULL,
+  PRIMARY KEY (`id_user`,`id_produit`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `pannier`
+--
+
+INSERT INTO `pannier` (`id_user`, `id_produit`, `qte`) VALUES
+(1, 2, 1),
+(1, 3, 1),
+(1, 8, 3),
+(1, 11, 1);
 
 -- --------------------------------------------------------
 
@@ -85,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `produit` (
   `qte_dispo` int(2) NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `produit`
@@ -102,7 +120,11 @@ INSERT INTO `produit` (`id_cat`, `libelle`, `description`, `img`, `prix`, `qte_d
 (2, 'Lunettes', 'Lunettes de soleil du futur', '4.jpg', '20.00', 50, 8),
 (2, 'Talon', 'Talons-sandale pour chaussette', '5.jpg', '70.00', 50, 9),
 (2, 'Manteau', 'Manteau de fourure', '6.jpg', '150.00', 50, 10),
-(2, 'Bague', 'Bague en diamant', '7.jpg', '500.00', 50, 11);
+(2, 'Bague', 'Bague en diamant', '7.jpg', '500.00', 50, 11),
+(3, 'Chaussures', 'Chaussures Tortue Ninja', '1.jpg', '40.00', 50, 12),
+(3, 'Sac', 'Sac à dos leger', '2.jpg', '60.00', 50, 13),
+(3, 'Guitare', 'Guitare pour debutant', '3.jpg', '200.00', 50, 14),
+(3, 'Ceinture', 'Ceinture de Papa', '4.jpg', '10.00', 50, 15);
 
 -- --------------------------------------------------------
 

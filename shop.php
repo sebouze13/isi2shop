@@ -79,7 +79,7 @@ switch ($categorie){
                                     </a>
                                 </div>
                                 <div class="list-types list">
-                                    <a href="shop-list.php">
+                                    <a href="#">
                                         <div class="list-icon list-types-icon"></div>
                                     </a>
                                 </div>
@@ -209,7 +209,7 @@ switch ($categorie){
                             ?>
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="pagination-bar">
+                                   <!-- <div class="pagination-bar">
                                         <ul>
                                             <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
                                             <li class="active"><a href="#">1</a></li>
@@ -217,7 +217,7 @@ switch ($categorie){
                                             <li><a href="#">3</a></li>
                                             <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

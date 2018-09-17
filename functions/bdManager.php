@@ -282,3 +282,32 @@ function deleteFavoris($id_user, $id_produit){
 
     $conn->close();
 }
+
+function getWishlist($idUser){
+    global $servername;
+    global $username;
+    global $password;
+    global $dbname;
+
+    $retour = array();
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $selectFavoris = "SELECT * FROM favoris WHERE id_user=$idUser";
+    $result = $conn->query($selectFavoris);
+
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $liste = new Favoris($row["id_user"], $row["id_produit"]);
+            array_push($retour, $liste);
+        }
+    }
+    return $retour;
+
+    $conn->close();
+}

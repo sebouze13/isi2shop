@@ -109,7 +109,7 @@ $qte=1;
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <button>
+                                                    <button name="addToCart-btn">
                                                         <i title="Shopping Cart" class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                     </button>
                                                     <a href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT , '&idProd=', $produit->id ?>"><i title="Remove Item From Cart" data-id="100" class="fa fa-trash cart-remove-item"></i></a>

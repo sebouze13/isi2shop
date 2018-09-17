@@ -34,19 +34,30 @@ $nb = count($prodWish);
 
 if(array_key_exists(IDUSER, $_SESSION)){
     $panier = getPanier($_SESSION[IDUSER]);
+    $listFav = getWishlist($_SESSION[IDUSER]);
 } else {
     $panier = getPanierInvite();
 }
 
 $total = 0;
+$existe = false;
 
 if(array_key_exists(OP_NAME, $_GET)){
     if ($_GET[OP_NAME] == OP_RETRAIT){
         deleteFavoris($_SESSION[IDUSER], $_GET['idProd']);
         header('Location:'.$_SERVER['PHP_SELF'].'?idProd='.$_GET['idProd']);
     }elseif ($_GET[OP_NAME] == OP_AJOUT){
-        addFavoris($_SESSION[IDUSER], $_GET['idProd']);
-        header('Location:'.$_SERVER['PHP_SELF'].'?idProd='.$_GET['idProd']);
+        foreach ($listFav as $value){
+            if($value->id_user == $_SESSION[IDUSER] && $value->id_produit == $_GET['idProd']) {
+                $existe = true;
+            }
+        }
+            if(!$existe){
+                addFavoris($_SESSION[IDUSER], $_GET['idProd']);
+            }
+            header('Location:'.$_SERVER['PHP_SELF'].'?idProd='.$_GET['idProd']);
+
+        
     }elseif ($_GET[OP_NAME] == OP_RETRAIT_CART){
         deleteLignePanier($_SESSION[IDUSER], $_GET['idProd']);
         header('Location:'.$_SERVER['PHP_SELF'].'?idProd='.$_GET['idProd']);
@@ -187,7 +198,7 @@ if(array_key_exists(OP_NAME, $_GET)){
                                         <span>
                                             <?php if(count($prodWish) !=0){
                                                 ?>
-                                            <small class="cart-notification"><?= count($prodWish) ?></small>
+                                                <small class="cart-notification"><?= count($prodWish) ?></small>
                                             <?php } ?>
                                         </span>
                                     </a>
@@ -254,47 +265,47 @@ if(array_key_exists(OP_NAME, $_GET)){
                                     <div class="cart-dropdown header-link-dropdown">
                                         <ul class="cart-list link-dropdown-list">
                                             <?php if(count($panier) > 0 ){
-                                            foreach ($panier as $value) {
-                                            $prod = $value->idProd;
-                                            $produit = getProdById($prod);
-                                            switch($produit->id_cat){
-                                                case 1:
-                                                    $dossierImage = MEN;
-                                                    break;
-                                                case 2:
-                                                    $dossierImage = WOMEN;
-                                                    break;
-                                                case 3:
-                                                    $dossierImage = KID;
-                                                    break;
-                                                case 4:
-                                                    $dossierImage = ELECTRO;
-                                                    break;
-                                                default:
-                                                    break;
-                                            }
-                                            ?>
-                                            <li> <a class="close-cart" href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT_CART , '&idProd=', $produit->id ?>"><i class="fa fa-times-circle"></i></a>
-                                                <div class="media"> <a class="pull-left" href="product-page?idProd=<?=$produit->id?>"> <img alt="Stylexpo" src="images/<?=$dossierImage."/".$produit->img?>"></a>
-                                                    <div class="media-body"> <span><a href="product-page?idProd=<?=$produit->id?>"><?=$produit->libelle?></a></span>
-                                                        <p class="cart-price">$<?=$produit->prix*$value->qte?></p>
-                                                        <div class="product-qty">
-                                                            <label>Qty:</label>
-                                                            <div class="custom-qty">
-                                                                <label><?=$value->qte?></label>
+                                                foreach ($panier as $value) {
+                                                    $prod = $value->idProd;
+                                                    $produit = getProdById($prod);
+                                                    switch($produit->id_cat){
+                                                        case 1:
+                                                            $dossierImage = MEN;
+                                                            break;
+                                                        case 2:
+                                                            $dossierImage = WOMEN;
+                                                            break;
+                                                        case 3:
+                                                            $dossierImage = KID;
+                                                            break;
+                                                        case 4:
+                                                            $dossierImage = ELECTRO;
+                                                            break;
+                                                        default:
+                                                            break;
+                                                    }
+                                                    ?>
+                                                    <li> <a class="close-cart" href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT_CART , '&idProd=', $produit->id ?>"><i class="fa fa-times-circle"></i></a>
+                                                        <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/<?=$dossierImage."/".$produit->img?>"></a>
+                                                            <div class="media-body"> <span><a href="#"><?=$produit->libelle?></a></span>
+                                                                <p class="cart-price">$<?=$produit->prix*$value->qte?></p>
+                                                                <div class="product-qty">
+                                                                    <label>Qty:</label>
+                                                                    <div class="custom-qty">
+                                                                        <label><?=$value->qte?></label>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <?php
-                                                $total += $produit->prix*$value->qte;
-                                                    }
-                                                }else{
-                                            ?>
-                                            <p>No product in cart</p>
-                                            <?php
+                                                    </li>
+                                                    <?php
+                                                    $total += $produit->prix*$value->qte;
                                                 }
+                                            }else{
+                                                ?>
+                                                <p>No product in cart</p>
+                                                <?php
+                                            }
                                             ?>
                                         </ul>
                                         <p class="cart-sub-totle"> <span class="pull-left">Cart Subtotal</span> <span class="pull-right"><strong class="price-box">$<?=$total?></strong></span> </p>
@@ -435,43 +446,43 @@ if(array_key_exists(OP_NAME, $_GET)){
                             <ul class="cart-list link-dropdown-list">
                                 <?php
                                 if(count($panier) > 0 ){
-                                $i = 0;
-                                foreach ($panier as $value) {
-                                $idProd = $value->idProd;
-                                $produit = getProdById($idProd);
-                                switch($produit->id_cat){
-                                    case 1:
-                                        $dossierImage = MEN;
-                                        break;
-                                    case 2:
-                                        $dossierImage = WOMEN;
-                                        break;
-                                    case 3:
-                                        $dossierImage = KID;
-                                        break;
-                                    case 4:
-                                        $dossierImage = ELECTRO;
-                                        break;
-                                    default:
-                                        break;
-                                }
+                                    $i = 0;
+                                    foreach ($panier as $value) {
+                                        $idProd = $value->idProd;
+                                        $produit = getProdById($idProd);
+                                        switch($produit->id_cat){
+                                            case 1:
+                                                $dossierImage = MEN;
+                                                break;
+                                            case 2:
+                                                $dossierImage = WOMEN;
+                                                break;
+                                            case 3:
+                                                $dossierImage = KID;
+                                                break;
+                                            case 4:
+                                                $dossierImage = ELECTRO;
+                                                break;
+                                            default:
+                                                break;
+                                        }
 
-                                ?>
-                                <li> <a class="close-cart" href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT_CART , '&idProd=', $produit->id ?>"><i class="fa fa-times-circle"></i></a>
-                                    <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/<?=$dossierImage."/".$produit->getImg()?>"></a>
-                                        <div class="media-body"> <span><a href="product-page.php?idProd=<?=$produit->id?>"><?=$produit->getLibelle()?></a></span>
-                                            <p class="cart-price">$<?=$produit->prix?></p>
-                                            <div class="product-qty">
-                                                <label>Qty:</label>
-                                                <div class="custom-qty">
-                                                    <label><?=$value->qte?></label>
+                                        ?>
+                                        <li> <a class="close-cart" href="<?= $_SERVER['PHP_SELF'],'?' ,OP_NAME , '=' , OP_RETRAIT_CART , '&idProd=', $produit->id ?>"><i class="fa fa-times-circle"></i></a>
+                                            <div class="media"> <a class="pull-left"> <img alt="Stylexpo" src="images/<?=$dossierImage."/".$produit->getImg()?>"></a>
+                                                <div class="media-body"> <span><a href="product-page.php?idProd=<?=$produit->id?>"><?=$produit->getLibelle()?></a></span>
+                                                    <p class="cart-price">$<?=$produit->prix?></p>
+                                                    <div class="product-qty">
+                                                        <label>Qty:</label>
+                                                        <div class="custom-qty">
+                                                            <label><?=$value->qte?></label>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                    <?php
-                                }
+                                        </li>
+                                        <?php
+                                    }
                                 }
                                 ?>
                             </ul>

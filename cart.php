@@ -6,19 +6,29 @@ require_once  'functions/bdManager.php';
 require_once  'functions/constantes.php';
 require_once  'classes/produit.php';
 
-$panier = null;
 
 if(array_key_exists("updateCart", $_POST)){
     $i = 0;
-    while($i < count(getPanier($_SESSION[IDUSER]))){
-        updatePanier($_SESSION[IDUSER], $_POST["prod$i"], $_POST["quantite$i"]);
-        $i++;
+    if(array_key_exists(IDUSER, $_SESSION)){
+        while($i < count(getPanier($_SESSION[IDUSER]))){
+            updatePanier($_SESSION[IDUSER], $_POST["prod$i"], $_POST["quantite$i"]);
+            $i++;
+        }
+    } else {
+        while($i < count(getPanierInvite())){
+            updatePanierInvite($_POST["prod$i"], $_POST["quantite$i"]);
+            $i++;
+        }
     }
+
 }
 
-if ( array_key_exists(IDUSER, $_SESSION)) {
-    $panier = getPanier($_SESSION[IDUSER]);
+if(array_key_exists(IDUSER, $_SESSION)){
+    $checkout = "checkout.php";
+} else {
+    $checkout = "login.php";
 }
+
 
 ?>
 
@@ -269,7 +279,7 @@ if ( array_key_exists(IDUSER, $_SESSION)) {
             <div class="row">
                 <div class="col-12">
                     <div class="right-side float-none-xs">
-                        <a href="checkout.php" class="btn btn-color">Proceed to checkout
+                        <a href="<?=$checkout?>" class="btn btn-color">Proceed to checkout
                             <span><i class="fa fa-angle-right"></i></span>
                         </a>
                     </div>

@@ -21,3 +21,5 @@ define("MEN", "men");
 define("KID", "kid");
 define("ELECTRO", "electro");
 
+define("PANIER", "PANIER");
+define("SESS_CART", "SESS_CART");

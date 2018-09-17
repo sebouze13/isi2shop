@@ -8,8 +8,16 @@
 
 require_once "functions/constantes.php";
 require_once "functions/bdManager.php";
+require_once "functions/panierInvite.php";
 
-$panier = getPanier($_SESSION[IDUSER]);
+if(array_key_exists(IDUSER, $_SESSION)){
+    $panier = getPanier($_SESSION[IDUSER]);
+    $panierInvite = false;
+} else {
+    $panier = getPanierInvite();
+    $panierInvite = true;
+}
+
 $existe = false;
 
 if(array_key_exists('id', $_GET)){
@@ -19,20 +27,35 @@ if(array_key_exists('id', $_GET)){
     } else {
         $qte = "qte";
     }
-    foreach($panier as $value){
-        if($value->idUser == $_SESSION[IDUSER] && $value->idProd == $_GET['id']){
-            $existe = true;
-            $lignePanier = $value;
+    if ($panierInvite){
+        foreach($panier as $value){
+            if($value->idProd == $_GET['id']){
+                $existe = true;
+                $lignePanier = $value;
+            }
+        }
+        if($existe){
+            updatePanierInvite($_GET['id'], $_GET[$qte]);
+        } else{
+            addPanierInvite( $_GET['id'], $_GET[$qte]);
+        }
+    } else {
+        foreach($panier as $value){
+            if($value->idUser == $_SESSION[IDUSER] && $value->idProd == $_GET['id']){
+                $existe = true;
+                $lignePanier = $value;
+            }
+        }
+        if($existe){
+            updatePanier($_SESSION[IDUSER], $_GET['id'], $_GET[$qte]);
+        } else{
+            addPanier($_SESSION[IDUSER], $_GET['id'], $_GET[$qte]);
         }
     }
-    if($existe){
-        updatePanier($_SESSION[IDUSER], $_GET['id'], $_GET[$qte]);
-    } else{
-        addPanier($_SESSION[IDUSER], $_GET['id'], $_GET[$qte]);
-    }
+
 } else {
-    header("Location:shop.php");
+    //header("Location:shop.php");
 }
 
-header("Location:cart.php");
+//header("Location:cart.php");
 

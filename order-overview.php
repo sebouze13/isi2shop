@@ -2,11 +2,7 @@
 $page_name = "Order overview";
 require_once  'views/header.php';
 
-$panier = null;
 
-if(array_key_exists(IDUSER, $_SESSION)){
-    $panier = getPanier($_SESSION[IDUSER]);
-}
 ?>
   
   <!-- Bread Crumb STRAT -->
